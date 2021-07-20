@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "unsuckjs.com"
+version = "0.1.0"
+description = ""
+authors = ["Adam Hill <github@adamghill.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.66.0"
+uvicorn = {extras = ["standard"], version = "^0.14.0"}
+Jinja2 = "^3.0.1"
+aiofiles = "^0.7.0"
+httpx = "^0.18.2"
+python-dotenv = "^0.18.0"
+iso8601 = "^0.1.16"
+python-benedict = "^0.24.0"
+fastapi-cache = "^0.1.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+black = "^21.6b0"
+poethepoet = "^0.10.0"
+isort = "^5.9.2"
+
+[tool.poe.tasks]
+r = "uvicorn main:app --reload"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

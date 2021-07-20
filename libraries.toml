@@ -1,0 +1,34 @@
+[petite-vue]
+name = "petite-vue"
+repo_url = "https://github.com/vuejs/petite-vue"
+size = "~5.8 KB"
+cdn_url = "https://unpkg.com/petite-vue"
+categories = ["ui"]
+
+[Alpine]
+name = "Alpine.js"
+repo_url = "https://github.com/alpinejs/alpine"
+size = "~12 KB"
+cdn_url = "https://unpkg.com/alpinejs"
+categories = ["ui"]
+
+[htmx]
+name = "htmx"
+repo_url = "https://github.com/bigskysoftware/htmx"
+size = "~10 KB"
+ie11_compatible = true
+cdn_url = "https://unpkg.com/htmx.org"
+categories = ["ui"]
+
+[Litedom]
+name = "Litedom"
+repo_url = "https://github.com/mardix/litedom"
+size = "~3 KB"
+web_components = true
+categories = ["ui"]
+
+[CalDOM]
+name = "CalDOM"
+repo_url = "https://github.com/dumijay/CalDom"
+size = "~3 KB"
+categories = ["ui"]
