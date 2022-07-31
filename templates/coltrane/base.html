@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UnsuckJS</title>
+    <link rel="stylesheet" href="{% static 'css/unsuckjs.bulma.min.css' %}">
+
+    <style>
+        td div.pos {
+            color: green;
+            width: 20px;
+        }
+
+        td div.neg {
+            color: red;
+            width: 20px;
+        }
+    </style>
+
+    <!-- Panelbear Analytics - We respect your privacy -->
+    <script async src="https://cdn.panelbear.com/analytics.js?site=KVUfGU3Tp7q"></script>
+    <script>
+        window.panelbear = window.panelbear || function () {
+            (window.panelbear.q = window.panelbear.q || []).push(arguments);
+        };
+        panelbear('config', {
+            site: 'KVUfGU3Tp7q'
+        });
+    </script>
+
+    <script defer data-domain="unsuckjs.com" src="https://plausible.io/js/plausible.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                UnsuckJS
+            </h1>
+            <p class="subtitle">
+                Progressively enhance HTML with lightweight JavaScript libraries.
+            </p>
+            <p class="subtitle">
+                Fast and no build tools are required.
+            </p>
+        </div>
+    </section>
+
+    {% block content %}{% endblock content %}
+</body>
+
+</html>

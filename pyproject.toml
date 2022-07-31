@@ -1,30 +1,22 @@
 [tool.poetry]
-name = "unsuckjs.com"
+name = "unsuckjs.com-coltrane"
 version = "0.1.0"
 description = ""
-authors = ["Adam Hill <github@adamghill.com>"]
-license = "MIT"
+authors = ["adamghill <adamghill@yahoo.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-fastapi = "^0.66.0"
-uvicorn = {extras = ["standard"], version = "^0.14.0"}
-Jinja2 = "^3.0.1"
-aiofiles = "^0.7.0"
-httpx = "^0.18.2"
-python-dotenv = "^0.18.0"
-iso8601 = "^0.1.16"
-python-benedict = "^0.24.0"
-fastapi-cache = "^0.1.0"
+python = "^3.10"
+coltrane-web = {extras = ["deploy"], version = "<1"}
+iso8601 = "^1.0.2"
+django-cache-memoize = "^0.1.10"
+python-benedict = "^0.25.2"
+httpx = "^0.23.0"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^3.9.2"
-black = "^21.6b0"
-poethepoet = "^0.10.0"
-isort = "^5.9.2"
-
-[tool.poe.tasks]
-r = "uvicorn main:app --reload"
+isort = "^5.10.1"
+black = "^22.6.0"
+pytest = "^7.1.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
