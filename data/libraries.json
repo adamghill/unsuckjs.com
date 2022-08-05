@@ -7,6 +7,13 @@
         "categories": ["ui"]
     },
     {
+        "name": "Mithril",
+        "repo_url": "https://github.com/MithrilJS/mithril.js",
+        "size": "~9.5 KB",
+        "cdn_url": "https://unpkg.com/mithril",
+        "categories": ["ui"]
+    },
+    {
         "name": "htmx",
         "repo_url": "https://github.com/bigskysoftware/htmx",
         "size": "~10 KB",
@@ -25,6 +32,7 @@
         "name": "Litedom",
         "repo_url": "https://github.com/mardix/litedom",
         "size": "~3 KB",
+        "cdn_url": "https://unpkg.com/litedom",
         "web_components": true,
         "categories": ["ui"]
     },
@@ -32,12 +40,14 @@
         "name": "CalDOM",
         "repo_url": "https://github.com/dumijay/CalDom",
         "size": "~3 KB",
+        "cdn_url": "https://unpkg.com/caldom",
         "categories": ["ui"]
     },
     {
         "name": "bdc-js",
         "repo_url": "https://github.com/bwhmather/bdc-js",
         "size": "~1 KB",
+        "cdn_url": "https://github.com/bwhmather/bdc-js/releases/download/v1.0.0/bdc.min.js",
         "categories": ["ui"]
     }
 ]
