@@ -137,7 +137,7 @@
                     {% for library in data.libraries %}
                     <td>
                         {% if library.cdn_url %}
-                        <a href="{{ library.cdn_url }}">{{ library.cdn_url }}</a>
+                        <a href="{{ library.cdn_url }}">{{ library.cdn_url|cut:'https://'|truncatechars:10 }}</a>
                         {% else %}
                         --
                         {% endif %}
