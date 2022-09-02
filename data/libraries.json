@@ -50,5 +50,12 @@
         "size": "~1 KB",
         "cdn_url": "https://github.com/bwhmather/bdc-js/releases/download/v1.0.0/bdc.min.js",
         "categories": ["ui", "dom"]
+    },
+    {
+        "name": "diffHTML",
+        "repo_url": "https://github.com/tbranyen/diffhtml",
+        "size": "8 KB - 11 KB",
+        "cdn_url": "https://unpkg.com/diffhtml/dist/diffhtml.min.js",
+        "categories": ["ui", "dom"]
     }
 ]
