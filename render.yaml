@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: unsuckjs.com
-    env: python
-    repo: https://github.com/adamghill/unsuckjs.com
-    region: ohio
-    plan: free
-    domains:
-      - unsuckjs.com

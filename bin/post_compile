@@ -1,15 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-set -eo pipefail
+echo "Collect static files..."
+python app.py collectstatic --noinput
 
-indent() {
-  sed "s/^/       /"
-}
-
-puts-step() {
-  echo "-----> $@"
-}
-
-puts-step "Installing dependencies with poetry..."
-poetry config virtualenvs.create false 2>&1 | indent
-poetry install --no-dev 2>&1 | indent
+echo "Start gunicorn..."
+gunicorn app:wsgi --config="gunicorn.conf.py"
