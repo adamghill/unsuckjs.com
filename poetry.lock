@@ -109,7 +109,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "coltrane-web"
-version = "0.18.3"
+version = "0.18.4"
 description = "A simple content site framework that harnesses the power of Django without the hassle."
 category = "main"
 optional = false
@@ -262,6 +262,14 @@ termcolor = ">=1.1.0"
 
 [package.extras]
 ipython = ["IPython (==5.7.0)", "ipywidgets (==7.1.0)"]
+
+[[package]]
+name = "hiredis"
+version = "2.0.0"
+description = "Python wrapper for hiredis"
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "httpcore"
@@ -762,7 +770,7 @@ python-versions = ">=3.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "505040975514e0953b698c002252babca36c8ef1d9ac4e5500bc61aa02581220"
+content-hash = "201762985e45256652b038344fe040952e3bec755bb8732150530e63c2f22ca5"
 
 [metadata.files]
 anyio = []
@@ -785,6 +793,7 @@ ftfy = []
 gunicorn = []
 h11 = []
 halo = []
+hiredis = []
 httpcore = []
 httpx = []
 idna = []

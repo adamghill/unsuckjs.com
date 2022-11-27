@@ -12,6 +12,7 @@ django-cache-memoize = "^0.1.10"
 python-benedict = "^0.25.2"
 httpx = "^0.23.0"
 gunicorn = "^20.1.0"
+hiredis = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"
