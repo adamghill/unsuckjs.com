@@ -12,6 +12,16 @@ CACHES = {
     }
 }
 
+redis_url = getenv("REDIS_URL")
+
+if redis_url:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": redis_url,
+        }
+    }
+
 wsgi = initialize(
     CACHES=CACHES,
     GITHUB_USERNAME=getenv("GITHUB_USERNAME"),
