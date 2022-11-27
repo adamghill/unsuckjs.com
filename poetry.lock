@@ -27,6 +27,14 @@ python-versions = ">=3.7"
 tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
+name = "async-timeout"
+version = "4.0.2"
+description = "Timeout context manager for asyncio programs"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "atomicwrites"
 version = "1.4.1"
 description = "Atomic file writes."
@@ -386,7 +394,7 @@ python-versions = "*"
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -453,7 +461,7 @@ python-versions = ">=3.6"
 name = "pyparsing"
 version = "3.0.9"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6.8"
 
@@ -571,6 +579,22 @@ description = "YAML parser and emitter for Python"
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "redis"
+version = "4.3.5"
+description = "Python client for Redis database and key-value store"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+async-timeout = ">=4.0.2"
+packaging = ">=20.4"
+
+[package.extras]
+hiredis = ["hiredis (>=1.0.0)"]
+ocsp = ["cryptography (>=36.0.1)", "pyopenssl (==20.0.1)", "requests (>=2.26.0)"]
 
 [[package]]
 name = "regex"
@@ -770,11 +794,12 @@ python-versions = ">=3.4"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "201762985e45256652b038344fe040952e3bec755bb8732150530e63c2f22ca5"
+content-hash = "1c48de4a33a57037bf114e15db5627e3b9d8163ca85506bbf8c00b482bd31ed5"
 
 [metadata.files]
 anyio = []
 asgiref = []
+async-timeout = []
 atomicwrites = []
 attrs = []
 black = []
@@ -821,6 +846,7 @@ python-slugify = []
 pytz = []
 pytz-deprecation-shim = []
 pyyaml = []
+redis = []
 regex = []
 requests = []
 rfc3986 = []
