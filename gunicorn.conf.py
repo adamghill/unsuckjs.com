@@ -11,3 +11,6 @@ log_file = "-"
 
 bind = "0.0.0.0:80"
 workers = multiprocessing.cpu_count() * 2 + 1
+
+# Hardcode the worker count to 2 to keep memory usage low
+workers = 2
