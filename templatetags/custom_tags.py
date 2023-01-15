@@ -35,7 +35,7 @@ def _get_github_data(url: str) -> Dict:
         return res.json()
 
 
-@cache_memoize(60 * 60 * 1)
+@cache_memoize(60 * 60 * 24)
 def _get_github_metadata(repo_name: str) -> Dict:
     metadata = {
         "description": None,
@@ -83,7 +83,6 @@ def _get_github_metadata(repo_name: str) -> Dict:
     return metadata
 
 
-@cache_memoize(60 * 1)
 def _get_github_repo_name(repo_url: str) -> str:
     github_repo_name = repo_url.strip()
     github_repo_name = github_repo_name.replace("https://github.com/", "")
