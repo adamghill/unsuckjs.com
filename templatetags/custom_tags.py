@@ -1,5 +1,5 @@
 import logging
-from typing import Dict, List
+from typing import Dict, List, Union
 
 import httpx
 import iso8601
@@ -98,15 +98,13 @@ def _get_repo_name(library: Dict) -> str:
         return _get_github_repo_name(library.get("repo_url"))
 
 
-def _get_stars(library: Dict):
+def _get_metadata_value(library: Dict, key: str) -> Union[int, str]:
     repo_name = _get_repo_name(library)
 
     if repo_name:
         metadata = _get_github_metadata(repo_name)
 
-        return metadata.get("stars", 0)
-
-    return 0
+        return metadata[key]
 
 
 @register.simple_tag
@@ -119,4 +117,6 @@ def repo(library: Dict) -> Dict:
 
 @register.simple_tag
 def sort_libraries_by_stars(libraries: List[Dict]) -> List[Dict]:
-    return sorted(libraries, key=lambda l: _get_stars(l), reverse=True)
+    return sorted(
+        libraries, key=lambda l: _get_metadata_value(l, "last_commit"), reverse=True
+    )
