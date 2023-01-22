@@ -1,5 +1,5 @@
 import logging
-from typing import Dict
+from typing import Dict, List
 
 import httpx
 import iso8601
@@ -93,12 +93,30 @@ def _get_github_repo_name(repo_url: str) -> str:
     return github_repo_name
 
 
+def _get_repo_name(library: Dict) -> str:
+    if "github.com" in library.get("repo_url").lower():
+        return _get_github_repo_name(library.get("repo_url"))
+
+
+def _get_stars(library: Dict):
+    repo_name = _get_repo_name(library)
+
+    if repo_name:
+        metadata = _get_github_metadata(repo_name)
+
+        return metadata.get("stars", 0)
+
+    return 0
+
+
 @register.simple_tag
 def repo(library: Dict) -> Dict:
-    value = {}
+    repo_name = _get_repo_name(library)
 
-    if "github.com" in library.get("repo_url").lower():
-        repo_name = _get_github_repo_name(library.get("repo_url"))
-        value = _get_github_metadata(repo_name)
+    if repo_name:
+        return _get_github_metadata(repo_name)
 
-    return value
+
+@register.simple_tag
+def sort_libraries_by_stars(libraries: List[Dict]) -> List[Dict]:
+    return sorted(libraries, key=lambda l: _get_stars(l), reverse=True)
