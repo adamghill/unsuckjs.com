@@ -57,5 +57,19 @@
         "size": "8 KB - 11 KB",
         "cdn_url": "https://unpkg.com/diffhtml/dist/diffhtml.min.js",
         "categories": ["ui", "dom"]
+    },
+    {
+        "name": "dlite",
+        "repo_url": "https://github.com/adamghill/dlite",
+        "size": "~3.5 KB",
+        "cdn_url": "https://unpkg.com/dlite",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "spræ",
+        "repo_url": "https://github.com/dy/sprae",
+        "size": "~5 KB",
+        "categories": ["ui"]
     }
 ]
