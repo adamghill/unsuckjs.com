@@ -61,7 +61,7 @@
     {
         "name": "dlite",
         "repo_url": "https://github.com/adamghill/dlite",
-        "size": "~3.5 KB",
+        "size": "<5 KB",
         "cdn_url": "https://unpkg.com/dlite",
         "web_components": true,
         "categories": ["ui"]
@@ -70,6 +70,14 @@
         "name": "spræ",
         "repo_url": "https://github.com/dy/sprae",
         "size": "~5 KB",
+        "categories": ["ui"]
+    },
+    {
+        "name": "lit",
+        "repo_url": "https://github.com/lit/lit/",
+        "size": "~5 KB",
+        "web_components": true,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js",
         "categories": ["ui"]
     }
 ]
