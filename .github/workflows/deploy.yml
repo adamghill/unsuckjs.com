@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  deploy_to_caprover:
+    runs-on: ubuntu-latest
+    name: Deploy to CapRover
+    steps:
+      - uses: actions/checkout@v3
+      - uses: adamghill/build-docker-and-deploy-to-caprover@v1
+        with:
+          caprover-app-name: unsuckjs-web
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          caprover-server-url: ${{ secrets.CAPROVER_SERVER_URL }}
+          caprover-app-token: ${{ secrets.CAPROVER_APP_TOKEN }}
