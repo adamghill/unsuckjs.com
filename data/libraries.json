@@ -77,7 +77,32 @@
         "repo_url": "https://github.com/lit/lit/",
         "size": "~5 KB",
         "web_components": true,
+        "ie11_compatible": true,
         "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "strawberry",
+        "repo_url": "https://github.com/18alantom/strawberry",
+        "size": "~5 KB",
+        "web_components": true,
+        "cdn_url": "https://unpkg.com/sberry/dist/sb.min.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "ponys",
+        "repo_url": "https://github.com/jhuddle/ponys",
+        "size": "<2 KB",
+        "web_components": true,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/jhuddle/ponys/miniature-ponys.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "dom-proxy",
+        "repo_url": "https://github.com/beenotung/dom-proxy",
+        "size": "<9 KB",
+        "web_components": true,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy@2/browser.min.js",
         "categories": ["ui"]
     }
 ]
