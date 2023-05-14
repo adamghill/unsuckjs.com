@@ -39,7 +39,7 @@
                 <tr>
                     <td>Repo</td>
                     {% for library in libraries %}
-                    <td><a href="{{ library.repo_url }}">{{ library.repo_url }}</a></td>
+                    <td><a href="{{ library.repo_url }}">{{ library.repo_url|cut:'https://'|cut:'github.com/' }}</a></td>
                     {% endfor %}
                 </tr>
                 <tr>
