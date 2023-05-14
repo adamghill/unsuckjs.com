@@ -104,5 +104,13 @@
         "web_components": true,
         "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy@2/browser.min.js",
         "categories": ["ui"]
-    }
+    },
+    {
+        "name": "reken",
+        "repo_url": "https://github.com/hbroek/reken",
+        "size": "5 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
+        "categories": ["ui"]
+    },
 ]
