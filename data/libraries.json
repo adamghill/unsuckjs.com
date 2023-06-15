@@ -112,5 +112,13 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "unpoly",
+        "repo_url": "https://github.com/unpoly/unpoly",
+        "size": "~47 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/unpoly/unpoly.min.js",
+        "categories": ["ui"]
     }
 ]
