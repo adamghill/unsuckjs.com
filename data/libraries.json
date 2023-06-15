@@ -114,6 +114,14 @@
         "categories": ["ui"]
     },
     {
+        "name": "hyperapp",
+        "repo_url": "https://github.com/jorgebucaran/hyperapp",
+        "size": "1 KB",
+        "web_components": false,
+        "cdn_url": "https://unpkg.com/hyperapp",
+        "categories": ["ui"]
+    },
+    {
         "name": "TwinSpark",
         "repo_url": "https://github.com/piranha/twinspark-js",
         "size": "8 KB",
