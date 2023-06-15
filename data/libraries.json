@@ -112,5 +112,13 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "Tram-Lite",
+        "repo_url": "https://github.com/Tram-One/tram-lite",
+        "size": "10 KB",
+        "web_components": true,
+        "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
+        "categories": ["ui"]
     }
 ]
