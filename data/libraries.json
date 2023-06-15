@@ -136,4 +136,5 @@
         "web_components": true,
         "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
         "categories": ["ui"]
+    }
 ]
