@@ -112,5 +112,13 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "TwinSpark",
+        "repo_url": "https://github.com/piranha/twinspark-js",
+        "size": "8 KB",
+        "web_components": false,
+        "cdn_url": "https://github.com/piranha/twinspark-js",
+        "categories": ["ui"]
     }
 ]
