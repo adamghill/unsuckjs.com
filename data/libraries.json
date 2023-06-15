@@ -114,6 +114,14 @@
         "categories": ["ui"]
     },
     {
+        "name": "TwinSpark",
+        "repo_url": "https://github.com/piranha/twinspark-js",
+        "size": "8 KB",
+        "web_components": false,
+        "cdn_url": "https://github.com/piranha/twinspark-js",
+        "categories": ["ui"]
+    },
+    {
         "name": "data-template",
         "repo_url": "https://github.com/beenotung/data-template",
         "size": "1.2 KB",
