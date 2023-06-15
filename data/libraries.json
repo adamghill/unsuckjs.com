@@ -112,5 +112,14 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "preact",
+        "repo_url": "https://github.com/preactjs/preact",
+        "size": "3 KB",
+        "web_components": true,
+        "ie11_compatible": true,
+        "cdn_url": "n/a",
+        "categories": ["dom"]
     }
 ]
