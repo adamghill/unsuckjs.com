@@ -86,7 +86,7 @@
         "size": "~5 KB",
         "web_components": true,
         "ie11_compatible": true,
-        "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js",
+        "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist/core/lit-core.min.js",
         "categories": ["ui"]
     },
     {
@@ -110,7 +110,7 @@
         "repo_url": "https://github.com/beenotung/dom-proxy",
         "size": "<9 KB",
         "web_components": true,
-        "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy@2/browser.min.js",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy/browser.min.js",
         "categories": ["ui"]
     },
     {
@@ -150,7 +150,7 @@
         "repo_url": "https://github.com/beenotung/data-template",
         "size": "1.2 KB",
         "web_components": false,
-        "cdn_url": "https://cdn.jsdelivr.net/npm/data-template@1.4/base.js",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/data-template/base.js",
         "categories": ["ui"]
     },
     {
