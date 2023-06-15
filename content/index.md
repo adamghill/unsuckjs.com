@@ -150,11 +150,11 @@
                     <td>Web Components</td>
                     {% for library in libraries %}
                     <td style="vertical-align: middle;">
-                        {% if library.web_components %}
+                        {% if library.web_components is True %}
                         <div class="pos">
                             <img src="{% static 'svg/check.svg' %}">
                         </div>
-                        {% else %}
+                        {% elif library.web_components is False %}
                         <div class="neg">
                             <img src="{% static 'svg/x.svg' %}">
                         </div>
@@ -166,11 +166,11 @@
                     <td>IE11 Compatible</td>
                     {% for library in libraries %}
                     <td style="vertical-align: middle;">
-                        {% if library.ie11_compatible %}
+                        {% if library.ie11_compatible is True %}
                         <div class="pos">
                             <img src="{% static 'svg/check.svg' %}">
                         </div>
-                        {% else %}
+                        {% elif library.ie11_compatible is False %}
                         <div class="neg">
                             <img src="{% static 'svg/x.svg' %}">
                         </div>

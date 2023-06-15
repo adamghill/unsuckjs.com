@@ -74,7 +74,7 @@
     },
     {
         "name": "lit",
-        "repo_url": "https://github.com/lit/lit/",
+        "repo_url": "https://github.com/lit/lit",
         "size": "~5 KB",
         "web_components": true,
         "ie11_compatible": true,
@@ -119,6 +119,30 @@
         "size": "1.3 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-0.12.2.min.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "hyperapp",
+        "repo_url": "https://github.com/jorgebucaran/hyperapp",
+        "size": "1 KB",
+        "web_components": false,
+        "cdn_url": "https://unpkg.com/hyperapp",
+        "categories": ["ui"]
+    },
+    {
+        "name": "TwinSpark",
+        "repo_url": "https://github.com/piranha/twinspark-js",
+        "size": "8 KB",
+        "web_components": false,
+        "cdn_url": "https://github.com/piranha/twinspark-js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "data-template",
+        "repo_url": "https://github.com/beenotung/data-template",
+        "size": "1.2 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/data-template@1.4/base.js",
         "categories": ["ui"]
     }
 ]
