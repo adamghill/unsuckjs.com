@@ -74,7 +74,7 @@
     },
     {
         "name": "lit",
-        "repo_url": "https://github.com/lit/lit/",
+        "repo_url": "https://github.com/lit/lit",
         "size": "~5 KB",
         "web_components": true,
         "ie11_compatible": true,
@@ -111,6 +111,14 @@
         "size": "5 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "data-template",
+        "repo_url": "https://github.com/beenotung/data-template",
+        "size": "1.2 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/data-template@1.4/base.js",
         "categories": ["ui"]
     }
 ]
