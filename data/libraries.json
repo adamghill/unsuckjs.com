@@ -1,5 +1,13 @@
 [
     {
+        "name": "RE:DOM",
+        "repo_url": "https://redom.js.org/",
+        "size": "~2 KB",        
+        "cdn_url": "https://redom.js.org/redom.min.js",
+        "web_components": false,        
+        "categories": ["ui"]        
+    },
+    {
         "name": "Alpine.js",
         "repo_url": "https://github.com/alpinejs/alpine",
         "size": "~12 KB",
