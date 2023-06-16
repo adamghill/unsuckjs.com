@@ -27,7 +27,7 @@
             </tfoot>
             <tbody>
                 <tr>
-                    <td>Description</td>
+                    <td class="header">Description</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
                     
@@ -37,13 +37,13 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Repo</td>
+                    <td class="header">Repo</td>
                     {% for library in libraries %}
                     <td><a href="{{ library.repo_url }}">{{ library.repo_url|cut:'https://'|cut:'github.com/' }}</a></td>
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Size</td>
+                    <td class="header">Size</td>
                     {% for library in libraries %}
                     <td>
                         {{ library.size }}
@@ -51,7 +51,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Last commit</td>
+                    <td class="header">Last commit</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
 
@@ -61,7 +61,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Version</td>
+                    <td class="header">Version</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
 
@@ -76,21 +76,21 @@
                     {% endfor %}
                 </tr>
                 <!--<tr>
-                    <td>Commits</td>
+                    <td class="header">Commits</td>
                     {% for library in libraries %}
                     <td>
                     </td>
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Authors</td>
+                    <td class="header">Authors</td>
                     {% for library in libraries %}
                     <td>
                     </td>
                     {% endfor %}
                 </tr>-->
                 <tr>
-                    <td>Stars</td>
+                    <td class="header">Stars</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
 
@@ -100,7 +100,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Watchers</td>
+                    <td class="header">Watchers</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
 
@@ -110,7 +110,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Forks</td>
+                    <td class="header">Forks</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
 
@@ -120,7 +120,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Open Issues</td>
+                    <td class="header">Open Issues</td>
                     {% for library in libraries %}
                     {% repo library as metadata %}
 
@@ -135,7 +135,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>CDN</td>
+                    <td class="header">CDN</td>
                     {% for library in libraries %}
                     <td>
                         {% if library.cdn_url %}
@@ -147,7 +147,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Web Components</td>
+                    <td class="header">Web Components</td>
                     {% for library in libraries %}
                     <td style="vertical-align: middle;">
                         {% if library.web_components is True %}
@@ -163,7 +163,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>IE11 Compatible</td>
+                    <td  class="header">IE11 Compatible</td>
                     {% for library in libraries %}
                     <td style="vertical-align: middle;">
                         {% if library.ie11_compatible is True %}
