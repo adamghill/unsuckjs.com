@@ -116,7 +116,7 @@
     {
         "name": "turbo",
         "repo_url": "https://github.com/hotwired/turbo",
-        "size": "75 KB",
+        "size": "~19 KB",
         "ie11_compatible": false,
         "cdn_url": "https://cdn.skypack.dev/@hotwired/turbo",
         "categories": ["ui"]
