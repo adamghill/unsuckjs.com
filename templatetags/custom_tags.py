@@ -47,6 +47,7 @@ def _get_github_metadata(repo_name: str) -> Dict:
         "last_commit": None,
         "latest_version": None,
         "latest_tag": None,
+        "license": None,
     }
 
     commit_url = f"https://api.github.com/repos/{repo_name}/commits?page=1&per_page=1"
@@ -69,6 +70,17 @@ def _get_github_metadata(repo_name: str) -> Dict:
         metadata["watchers"] = repo.get("subscribers_count")
         metadata["forks"] = repo.get("forks")
         metadata["open_issues"] = repo.get("open_issues")
+
+        license = repo.get("license") or {}
+
+        if license and license.get("spdx_id"):
+            if license.get("url"):
+                metadata[
+                    "license"
+                ] = f'<a href="{license.get("url")}">{license.get("spdx_id")}</a>'
+            else:
+                if license.get("url"):
+                    metadata["license"] = license.get("spdx_id")
 
     releases_url = (
         f"https://api.github.com/repos/{repo_name}/releases?page=1&per_page=1"
