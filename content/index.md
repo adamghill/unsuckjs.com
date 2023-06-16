@@ -1,7 +1,7 @@
 <section class="section">
     <div class="table-container">
         <table class="table">
-            {% sort_libraries_by_stars data.libraries as libraries %}
+            {% sort_libraries data.libraries 'last_commit' as libraries %}
 
             <thead>
                 <tr>

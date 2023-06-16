@@ -116,7 +116,7 @@ def repo(library: Dict) -> Dict:
 
 
 @register.simple_tag
-def sort_libraries_by_stars(libraries: List[Dict]) -> List[Dict]:
+def sort_libraries(libraries: List[Dict], key: str) -> List[Dict]:
     return sorted(
-        libraries, key=lambda l: _get_metadata_value(l, "last_commit"), reverse=True
+        libraries, key=lambda l: _get_metadata_value(l, key) or "", reverse=True
     )
