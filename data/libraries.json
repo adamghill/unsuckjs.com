@@ -160,5 +160,13 @@
         "web_components": true,
         "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
         "categories": ["ui"]
+    },
+    {   
+        "name": "Bau",
+        "repo_url": "https://github.com/grucloud/bau",
+        "size": "1.6 KB",
+        "web_components": false,
+        "cdn_url": "https://unpkg.com/@grucloud/bau",
+        "categories": ["ui"]
     }
 ]
