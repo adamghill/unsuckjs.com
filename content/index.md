@@ -39,7 +39,13 @@
                 <tr>
                     <td class="header">Repo</td>
                     {% for library in libraries %}
-                    <td><a href="{{ library.repo_url }}">{{ library.repo_url|cut:'https://'|cut:'github.com/' }}</a></td>
+                    {% repo library as metadata %}
+
+                    <td>
+                        <a href="{{ library.repo_url }}">
+                            {{ metadata.repo_url_display }}
+                        </a>
+                    </td>
                     {% endfor %}
                 </tr>
                 <tr>

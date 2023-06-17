@@ -35,7 +35,7 @@ def _get_github_data(url: str) -> Dict:
         return res.json()
 
 
-@cache_memoize(60 * 60 * 24)
+@cache_memoize(60 * 60 * 24, prefix="20230617")
 def _get_github_metadata(repo_name: str) -> Dict:
     metadata = {
         "description": None,
@@ -70,6 +70,10 @@ def _get_github_metadata(repo_name: str) -> Dict:
         metadata["watchers"] = repo.get("subscribers_count")
         metadata["forks"] = repo.get("forks")
         metadata["open_issues"] = repo.get("open_issues")
+
+        metadata["repo_url_display"] = repo_url.replace("https://", "").replace(
+            "github.com/", ""
+        )
 
         license = repo.get("license") or {}
 
