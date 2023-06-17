@@ -43,7 +43,7 @@
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td class="header">Size</td>
+                    <td class="header">Minified Size</td>
                     {% for library in libraries %}
                     <td>
                         {{ library.size }}
