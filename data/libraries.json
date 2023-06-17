@@ -169,5 +169,13 @@
         "web_components": true,
         "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "Unpoly",
+        "repo_url": "https://github.com/unpoly/unpoly",
+        "size": "48.3 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/unpoly@3.2.0/unpoly.min.js",
+        "categories": ["ui"]
     }
 ]
