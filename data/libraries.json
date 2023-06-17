@@ -122,6 +122,15 @@
         "categories": ["ui"]
     },
     {
+        "name": "preact",
+        "repo_url": "https://github.com/preactjs/preact",
+        "size": "3 KB",
+        "web_components": true,
+        "ie11_compatible": true,
+        "cdn_url": null,
+        "categories": ["ui"]
+    },
+    {
         "name": "VanJS",
         "repo_url": "https://github.com/vanjs-org/van",
         "size": "0.8 KB",
