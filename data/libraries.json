@@ -1,172 +1,181 @@
 [
   {
-    "name": "RE:DOM",
-    "repo_url": "https://github.com/redom/redom",
-    "size": "~2 KB",
-    "cdn_url": "https://redom.js.org/redom.min.js",
-    "web_components": false,
-    "categories": ["ui"]
+      "name": "RE:DOM",
+      "repo_url": "https://github.com/redom/redom",
+      "size": "~2 KB",        
+      "cdn_url": "https://redom.js.org/redom.min.js",
+      "web_components": false,        
+      "categories": ["ui"]        
   },
   {
-    "name": "Alpine.js",
-    "repo_url": "https://github.com/alpinejs/alpine",
-    "size": "~12 KB",
-    "cdn_url": "https://unpkg.com/alpinejs",
-    "categories": ["ui"]
+      "name": "Alpine.js",
+      "repo_url": "https://github.com/alpinejs/alpine",
+      "size": "~12 KB",
+      "cdn_url": "https://unpkg.com/alpinejs",
+      "categories": ["ui"]
   },
   {
-    "name": "Mithril",
-    "repo_url": "https://github.com/MithrilJS/mithril.js",
-    "size": "~9.5 KB",
-    "ie11_compatible": true,
-    "cdn_url": "https://unpkg.com/mithril",
-    "categories": ["ui"]
+      "name": "Mithril",
+      "repo_url": "https://github.com/MithrilJS/mithril.js",
+      "size": "~9.5 KB",
+      "ie11_compatible": true,
+      "cdn_url": "https://unpkg.com/mithril",
+      "categories": ["ui"]
   },
   {
-    "name": "htmx",
-    "repo_url": "https://github.com/bigskysoftware/htmx",
-    "size": "~10 KB",
-    "ie11_compatible": true,
-    "cdn_url": "https://unpkg.com/htmx.org",
-    "categories": ["ui", "ajax"]
+      "name": "htmx",
+      "repo_url": "https://github.com/bigskysoftware/htmx",
+      "size": "~10 KB",
+      "ie11_compatible": true,
+      "cdn_url": "https://unpkg.com/htmx.org",
+      "categories": ["ui", "ajax"]
   },
   {
-    "name": "petite-vue",
-    "repo_url": "https://github.com/vuejs/petite-vue",
-    "size": "~5.8 KB",
-    "cdn_url": "https://unpkg.com/petite-vue",
-    "categories": ["ui"]
+      "name": "petite-vue",
+      "repo_url": "https://github.com/vuejs/petite-vue",
+      "size": "~5.8 KB",
+      "cdn_url": "https://unpkg.com/petite-vue",
+      "categories": ["ui"]
   },
   {
-    "name": "Litedom",
-    "repo_url": "https://github.com/mardix/litedom",
-    "size": "~3 KB",
-    "cdn_url": "https://unpkg.com/litedom",
-    "web_components": true,
-    "categories": ["ui"]
+      "name": "Litedom",
+      "repo_url": "https://github.com/mardix/litedom",
+      "size": "~3 KB",
+      "cdn_url": "https://unpkg.com/litedom",
+      "web_components": true,
+      "categories": ["ui"]
   },
   {
-    "name": "CalDOM",
-    "repo_url": "https://github.com/dumijay/CalDom",
-    "size": "~3 KB",
-    "cdn_url": "https://unpkg.com/caldom",
-    "categories": ["ui", "dom"]
+      "name": "CalDOM",
+      "repo_url": "https://github.com/dumijay/CalDom",
+      "size": "~3 KB",
+      "cdn_url": "https://unpkg.com/caldom",
+      "categories": ["ui", "dom"]
   },
   {
-    "name": "bdc-js",
-    "repo_url": "https://github.com/bwhmather/bdc-js",
-    "size": "~1 KB",
-    "cdn_url": "https://github.com/bwhmather/bdc-js/releases/download/v1.0.0/bdc.min.js",
-    "categories": ["ui", "dom"]
+      "name": "bdc-js",
+      "repo_url": "https://github.com/bwhmather/bdc-js",
+      "size": "~1 KB",
+      "cdn_url": "https://github.com/bwhmather/bdc-js/releases/download/v1.0.0/bdc.min.js",
+      "categories": ["ui", "dom"]
   },
   {
-    "name": "diffHTML",
-    "repo_url": "https://github.com/tbranyen/diffhtml",
-    "size": "8 KB - 11 KB",
-    "cdn_url": "https://unpkg.com/diffhtml/dist/diffhtml.min.js",
-    "categories": ["ui", "dom"]
+      "name": "diffHTML",
+      "repo_url": "https://github.com/tbranyen/diffhtml",
+      "size": "8 KB - 11 KB",
+      "cdn_url": "https://unpkg.com/diffhtml/dist/diffhtml.min.js",
+      "categories": ["ui", "dom"]
   },
   {
-    "name": "dlite",
-    "repo_url": "https://github.com/adamghill/dlite",
-    "size": "<5 KB",
-    "cdn_url": "https://unpkg.com/dlite",
-    "web_components": true,
-    "categories": ["ui"]
+      "name": "dlite",
+      "repo_url": "https://github.com/adamghill/dlite",
+      "size": "<5 KB",
+      "cdn_url": "https://unpkg.com/dlite",
+      "web_components": true,
+      "categories": ["ui"]
   },
   {
-    "name": "spræ",
-    "repo_url": "https://github.com/dy/sprae",
-    "size": "~5 KB",
-    "categories": ["ui"]
+      "name": "spræ",
+      "repo_url": "https://github.com/dy/sprae",
+      "size": "~5 KB",
+      "categories": ["ui"]
   },
   {
-    "name": "lit",
-    "repo_url": "https://github.com/lit/lit",
-    "size": "~5 KB",
-    "web_components": true,
-    "ie11_compatible": true,
-    "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist/core/lit-core.min.js",
-    "categories": ["ui"]
+      "name": "lit",
+      "repo_url": "https://github.com/lit/lit",
+      "size": "~5 KB",
+      "web_components": true,
+      "ie11_compatible": true,
+      "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist/core/lit-core.min.js",
+      "categories": ["ui"]
   },
   {
-    "name": "strawberry",
-    "repo_url": "https://github.com/18alantom/strawberry",
-    "size": "~5 KB",
-    "web_components": true,
-    "cdn_url": "https://unpkg.com/sberry/dist/sb.min.js",
-    "categories": ["ui"]
+      "name": "strawberry",
+      "repo_url": "https://github.com/18alantom/strawberry",
+      "size": "~5 KB",
+      "web_components": true,
+      "cdn_url": "https://unpkg.com/sberry/dist/sb.min.js",
+      "categories": ["ui"]
   },
   {
-    "name": "ponys",
-    "repo_url": "https://github.com/jhuddle/ponys",
-    "size": "<2 KB",
-    "web_components": true,
-    "cdn_url": "https://cdn.jsdelivr.net/gh/jhuddle/ponys/miniature-ponys.js",
-    "categories": ["ui"]
+      "name": "ponys",
+      "repo_url": "https://github.com/jhuddle/ponys",
+      "size": "<2 KB",
+      "web_components": true,
+      "cdn_url": "https://cdn.jsdelivr.net/gh/jhuddle/ponys/miniature-ponys.js",
+      "categories": ["ui"]
   },
   {
-    "name": "dom-proxy",
-    "repo_url": "https://github.com/beenotung/dom-proxy",
-    "size": "<9 KB",
-    "web_components": true,
-    "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy/browser.min.js",
-    "categories": ["ui"]
+      "name": "dom-proxy",
+      "repo_url": "https://github.com/beenotung/dom-proxy",
+      "size": "<9 KB",
+      "web_components": true,
+      "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy/browser.min.js",
+      "categories": ["ui"]
   },
   {
-    "name": "reken",
-    "repo_url": "https://github.com/hbroek/reken",
-    "size": "5 KB",
-    "web_components": false,
-    "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
-    "categories": ["ui"]
+      "name": "reken",
+      "repo_url": "https://github.com/hbroek/reken",
+      "size": "5 KB",
+      "web_components": false,
+      "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
+      "categories": ["ui"]
   },
   {
-    "name": "VanJS",
-    "repo_url": "https://github.com/vanjs-org/van",
-    "size": "1.3 KB",
-    "web_components": false,
-    "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-0.12.2.min.js",
-    "categories": ["ui"]
+      "name": "preact",
+      "repo_url": "https://github.com/preactjs/preact",
+      "size": "3 KB",
+      "web_components": true,
+      "ie11_compatible": true,
+      "cdn_url": null,
+      "categories": ["ui"]
   },
   {
-    "name": "hyperapp",
-    "repo_url": "https://github.com/jorgebucaran/hyperapp",
-    "size": "1 KB",
-    "web_components": false,
-    "cdn_url": "https://unpkg.com/hyperapp",
-    "categories": ["ui"]
+      "name": "VanJS",
+      "repo_url": "https://github.com/vanjs-org/van",
+      "size": "0.8 KB",
+      "web_components": false,
+      "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-0.12.2.min.js",
+      "categories": ["ui"]
   },
   {
-    "name": "TwinSpark",
-    "repo_url": "https://github.com/piranha/twinspark-js",
-    "size": "8 KB",
-    "web_components": false,
-    "cdn_url": "https://github.com/piranha/twinspark-js",
-    "categories": ["ui"]
+      "name": "hyperapp",
+      "repo_url": "https://github.com/jorgebucaran/hyperapp",
+      "size": "1 KB",
+      "web_components": false,
+      "cdn_url": "https://unpkg.com/hyperapp",
+      "categories": ["ui"]
   },
   {
-    "name": "data-template",
-    "repo_url": "https://github.com/beenotung/data-template",
-    "size": "1.2 KB",
-    "web_components": false,
-    "cdn_url": "https://cdn.jsdelivr.net/npm/data-template/base.js",
-    "categories": ["ui"]
+      "name": "TwinSpark",
+      "repo_url": "https://github.com/piranha/twinspark-js",
+      "size": "8 KB",
+      "web_components": false,
+      "cdn_url": "https://github.com/piranha/twinspark-js",
+      "categories": ["ui"]
   },
   {
-    "name": "Tram-Lite",
-    "repo_url": "https://github.com/Tram-One/tram-lite",
-    "size": "10 KB",
-    "web_components": true,
-    "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
-    "categories": ["ui"]
+      "name": "data-template",
+      "repo_url": "https://github.com/beenotung/data-template",
+      "size": "1.2 KB",
+      "web_components": false,
+      "cdn_url": "https://cdn.jsdelivr.net/npm/data-template/base.js",
+      "categories": ["ui"]
   },
   {
-    "name": "Bau",
-    "repo_url": "https://github.com/grucloud/bau",
-    "size": "1.6 KB",
-    "web_components": false,
-    "cdn_url": "https://unpkg.com/@grucloud/bau",
-    "categories": ["ui"]
+      "name": "Tram-Lite",
+      "repo_url": "https://github.com/Tram-One/tram-lite",
+      "size": "10 KB",
+      "web_components": true,
+      "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
+      "categories": ["ui"]
+  },
+  {
+      "name": "Bau",
+      "repo_url": "https://github.com/grucloud/bau",
+      "size": "1.6 KB",
+      "web_components": false,
+      "cdn_url": "https://unpkg.com/@grucloud/bau",
+      "categories": ["ui"]
   }
 ]
