@@ -49,6 +49,16 @@
                     {% endfor %}
                 </tr>
                 <tr>
+                    <td class="header">License</td>
+                    {% for library in libraries %}
+                    {% repo library as metadata %}
+
+                    <td>
+                        {{ metadata.license|default:''|safe }}
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
                     <td class="header">Minified Size</td>
                     {% for library in libraries %}
                     <td>
