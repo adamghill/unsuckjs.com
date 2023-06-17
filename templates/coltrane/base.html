@@ -33,19 +33,34 @@
         .container {
             margin-left: 0px;
         }
+
+        tbody tr td.header {
+            font-weight: bold;
+        }
     </style>
 
     <script defer data-domain="unsuckjs.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
+    <section class="section" style="float: right;">
+        <a
+            href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+                src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
+                alt="DigitalOcean Referral Badge" /></a>
+    </section>
+
     <section class="section">
         <div class="container">
             <h1 class="title">
                 UnsuckJS
             </h1>
-            <p class="subtitle">
+            <p class="subtitle" style="padding-bottom: 5px; margin-bottom: 0px;">
                 Progressively enhance HTML with lightweight JavaScript libraries.
+
+                <p>
+                    No build tools, no compilers, and no hassle.
+                </p>
             </p>
         </div>
     </section>
@@ -61,13 +76,20 @@
 
     {% block content %}{% endblock content %}
 
-    <section class="section callout" style="margin-bottom: 3rem;">
+    <section class="section callout" style="margin-bottom: 1rem;">
         <a href="https://github.com/adamghill/unsuckjs.com/blob/main/data/libraries.json">
             Make a PR to add new projects +
         </a>
         <span style="float: right;">
             Scroll for more libraries ➠
         </span>
+    </section>
+
+    <section class="section" style="text-align: center; margin-bottom: 3rem;">
+        <a
+            href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+                src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
+                alt="DigitalOcean Referral Badge" /></a>
     </section>
 </body>
 

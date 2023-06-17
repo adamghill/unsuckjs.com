@@ -1,5 +1,13 @@
 [
     {
+        "name": "RE:DOM",
+        "repo_url": "https://github.com/redom/redom",
+        "size": "~2 KB",        
+        "cdn_url": "https://redom.js.org/redom.min.js",
+        "web_components": false,        
+        "categories": ["ui"]        
+    },
+    {
         "name": "Alpine.js",
         "repo_url": "https://github.com/alpinejs/alpine",
         "size": "~12 KB",
@@ -74,11 +82,11 @@
     },
     {
         "name": "lit",
-        "repo_url": "https://github.com/lit/lit/",
+        "repo_url": "https://github.com/lit/lit",
         "size": "~5 KB",
         "web_components": true,
         "ie11_compatible": true,
-        "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js",
+        "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist/core/lit-core.min.js",
         "categories": ["ui"]
     },
     {
@@ -102,7 +110,7 @@
         "repo_url": "https://github.com/beenotung/dom-proxy",
         "size": "<9 KB",
         "web_components": true,
-        "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy@2/browser.min.js",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy/browser.min.js",
         "categories": ["ui"]
     },
     {
@@ -119,7 +127,47 @@
         "size": "3 KB",
         "web_components": true,
         "ie11_compatible": true,
-        "cdn_url": "n/a",
-        "categories": ["dom"]
+        "cdn_url": null,
+        "categories": ["ui"]
+    },
+    {
+        "name": "VanJS",
+        "repo_url": "https://github.com/vanjs-org/van",
+        "size": "0.8 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-0.12.2.min.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "hyperapp",
+        "repo_url": "https://github.com/jorgebucaran/hyperapp",
+        "size": "1 KB",
+        "web_components": false,
+        "cdn_url": "https://unpkg.com/hyperapp",
+        "categories": ["ui"]
+    },
+    {
+        "name": "TwinSpark",
+        "repo_url": "https://github.com/piranha/twinspark-js",
+        "size": "8 KB",
+        "web_components": false,
+        "cdn_url": "https://github.com/piranha/twinspark-js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "data-template",
+        "repo_url": "https://github.com/beenotung/data-template",
+        "size": "1.2 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/data-template/base.js",
+        "categories": ["ui"]
+    },
+    {
+        "name": "Tram-Lite",
+        "repo_url": "https://github.com/Tram-One/tram-lite",
+        "size": "10 KB",
+        "web_components": true,
+        "cdn_url": "https://unpkg.com/tram-lite@2.4.0/src/tram-lite.js",
+        "categories": ["ui"]
     }
 ]
