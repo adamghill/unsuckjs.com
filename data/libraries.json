@@ -177,5 +177,13 @@
         "web_components": false,
         "cdn_url": "https://unpkg.com/@grucloud/bau",
         "categories": ["ui"]
-    }
+    },
+    {   
+        "name": "Crank.js",
+        "repo_url": "https://github.com/bikeshaving/crank",
+        "size": "~16 KB",
+        "web_components": false,
+        "cdn_url": "https://unpkg.com/@b9g/crank?module",
+        "categories": ["ui"]
+    }    
 ]
