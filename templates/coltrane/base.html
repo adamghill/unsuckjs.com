@@ -2,95 +2,228 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UnsuckJS</title>
-    <link rel="stylesheet" href="{% static 'css/unsuckjs.bulma.min.css' %}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UnsuckJS</title>
+  <link rel="stylesheet" href="{% static 'css/unsuckjs.bulma.min.css' %}">
 
-    <style>
-        td div.pos {
-            color: green;
-            width: 20px;
-        }
+  <style>
+    td div.pos {
+      color: green;
+      width: 20px;
+    }
 
-        td div.neg {
-            color: red;
-            width: 20px;
-        }
+    td div.neg {
+      color: red;
+      width: 20px;
+    }
 
-        .table {
-            border: 1px #ccc solid;
-        }
+    .table {
+      border: 1px #ccc solid;
+    }
 
-        .callout {
-            border: 1px #ccc solid;
-            background: #f2f2f2;
-            margin: 0px 3rem 0px 3rem;
-            border-radius: 1rem;
-            padding: 2rem;
-        }
+    .callout {
+      border: 1px #ccc solid;
+      background: #f2f2f2;
+      margin: 0px 3rem 0px 3rem;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
 
-        .container {
-            margin-left: 0px;
-        }
+    .container {
+      margin-left: 0px;
+    }
 
-        tbody tr td.header {
-            font-weight: bold;
-        }
-    </style>
+    tbody tr td.header {
+      font-weight: bold;
+    }
 
-    <script defer data-domain="unsuckjs.com" src="https://plausible.io/js/plausible.js"></script>
+    .info {
+      cursor: help;
+      color: grey;
+      font-weight: normal;
+    }
+
+    .info::before {
+      content: '\27AF  ';
+    }
+  </style>
+
+  <script defer data-domain="unsuckjs.com" src="https://plausible.io/js/script.tagged-events.outbound-links.js">
+  </script>
 </head>
 
 <body>
-    <section class="section" style="float: right;">
-        <a
-            href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
-                src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
-                alt="DigitalOcean Referral Badge" /></a>
-    </section>
+  <section class="section" style="float: right;">
+    <a
+      href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+        src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
+        alt="DigitalOcean Referral Badge" /></a>
+  </section>
 
-    <section class="section">
-        <div class="container">
-            <h1 class="title">
-                UnsuckJS
-            </h1>
-            <p class="subtitle" style="padding-bottom: 5px; margin-bottom: 0px;">
-                Progressively enhance HTML with lightweight JavaScript libraries.
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        UnsuckJS
+      </h1>
+      <p class="subtitle" style="padding-bottom: 5px; margin-bottom: 0px;">
+        Progressively enhance HTML with lightweight JavaScript libraries.
 
-                <p>
-                    No build tools, no compilers, and no hassle.
-                </p>
-            </p>
-        </div>
-    </section>
+        <p>
+          No build tools, no compilers, and no hassle.
+        </p>
+      </p>
+    </div>
+  </section>
 
-    <section class="section callout">
-        <a href="https://github.com/adamghill/unsuckjs.com/blob/main/data/libraries.json">
-            Make a PR to add new projects +
-        </a>
-        <span style="float: right;">
-            Scroll for more libraries ➠
-        </span>
-    </section>
+  <section class="section callout">
+    <a href="https://github.com/adamghill/unsuckjs.com/blob/main/data/libraries.json">
+      Make a PR to add new projects +
+    </a>
+    <span style="float: right;">
+      Scroll for more libraries ➠
+    </span>
+  </section>
 
-    {% block content %}{% endblock content %}
+  {% block content %}{% endblock content %}
 
-    <section class="section callout" style="margin-bottom: 1rem;">
-        <a href="https://github.com/adamghill/unsuckjs.com/blob/main/data/libraries.json">
-            Make a PR to add new projects +
-        </a>
-        <span style="float: right;">
-            Scroll for more libraries ➠
-        </span>
-    </section>
+  <section class="section callout" style="margin-bottom: 1rem;">
+    <a href="https://github.com/adamghill/unsuckjs.com/blob/main/data/libraries.json">
+      Make a PR to add new projects +
+    </a>
+    <span style="float: right;">
+      Scroll for more libraries ➠
+    </span>
+  </section>
 
-    <section class="section" style="text-align: center; margin-bottom: 3rem;">
-        <a
-            href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
-                src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
-                alt="DigitalOcean Referral Badge" /></a>
-    </section>
+  <section class="section" style="text-align: center; margin-bottom: 1rem;">
+    <a
+      href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+        src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
+        alt="DigitalOcean Referral Badge" /></a>
+  </section>
+
+  <footer class="footer">
+    <div class="columns">
+      <div class="column is-4">
+        <h2 class="title is-6">Sites</h2>
+        <ul>
+          <li>
+            <a href="https://fediview.com">fediview.com</a>
+            <span class="info">
+              Algorithmic timeline for Mastodon
+            </span>
+          </li>
+          <li>
+            <a href="https://devmarks.io">devmarks.io</a>
+            <span class="info">
+              Bookmarking for developers
+            </span>
+          </li>
+          <li>
+            <a href="https://quixels.com">quixels.com</a>
+            <span class="info">
+              API-first AI
+            </span>
+          </li>
+          <li>
+            <a href="https://alldjango.com">alldjango.com</a>
+            <span class="info">
+              No bullshit help for perfectionists
+            </span>
+          </li>
+          <li>
+            <a href="https://python-utils.adamghill.com">python-utils.adamghill.com</a>
+            <span class="info">
+              Python playground
+            </span>
+          </li>
+          <li>
+            <a href="https://isitwebscale.adamghill.com">isitwebscale.adamghill.com</a>
+            <span class="info">
+              Is it web scale?!
+            </span>
+          </li>
+          <li>
+            <a href="https://adamghill.com">adamghill.com</a>
+            <span class="info">
+              Homebase
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="column is-4">
+        <h2 class="title is-6">Libraries</h2>
+        <ul>
+          <li>
+            <a href="https://django-unicorn.com">unicorn</a>
+            <span class="info">
+              Reactive Django component library
+            </span>
+          </li>
+          <li>
+            <a href="https://dlitejs.com">dlite</a>
+            <span class="info">
+              Reactive Web Components (JS)
+            </span>
+          </li>
+          <li>
+            <a href="https://coltrane.readthedocs.io">coltrane</a>
+            <span class="info">
+              Hybrid static site generator
+            </span>
+          </li>
+          <li>
+            <a href="https://minestrone.readthedocs.io">minestrone</a>
+            <span class="info">
+              Parse and modify messy HTML
+            </span>
+          </li>
+          <li>
+            <a href="https://django-fbv.readthedocs.io">django-fbv</a>
+            <span class="info">
+              Django function-based view utilities
+            </span>
+          </li>
+          <li>
+            <a href="https://django-rich-logging.readthedocs.io">django-rich-logging</a>
+            <span class="info">
+              Tail Django requests
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="column is-4">
+        <h2 class="title is-6">Writing</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/adamghill">github.com/adamghill</a>
+            <span class="info">
+              Codes
+            </span>
+          </li>
+          <li>
+            <a href="https://indieweb.social/@adamghill">indieweb.social/@adamghill</a>
+            <span class="info">
+              Ramblings
+            </span>
+          </li>
+          <li>
+            <a href="https://dev.to/adamghill">dev.to/adamghill</a>
+            <span class="info">
+              Articles
+            </span>
+          </li>
+          <li>
+            <a href="https://www.indiehackers.com/adamghill">indiehackers.com/adamghill</a>
+            <span class="info">
+              Work in public
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
