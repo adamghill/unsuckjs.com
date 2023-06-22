@@ -178,14 +178,6 @@
         "cdn_url": "https://unpkg.com/@grucloud/bau",
         "categories": ["ui"]
     },
-    {
-        "name": "Mini-Van",
-        "repo_url": "https://github.com/vanjs-org/mini-van",
-        "size": "0.4 KB",
-        "web_components": false,
-        "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/mini-van/public/mini-van-latest.min.js",
-        "categories": ["ui"]
-    },
     {   
         "name": "Crank.js",
         "repo_url": "https://github.com/bikeshaving/crank",
@@ -200,6 +192,14 @@
         "size": "<2 KB",
         "web_components": true,
         "cdn_url": "https://unpkg.com/lighterhtml?module",
+        "categories": ["ui"]
+    },
+    {
+        "name": "Mini-Van",
+        "repo_url": "https://github.com/vanjs-org/mini-van",
+        "size": "0.4 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/mini-van/public/mini-van-latest.min.js",
         "categories": ["ui"]
     }
 ]
