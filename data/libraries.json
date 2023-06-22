@@ -185,5 +185,21 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/mini-van/public/mini-van-latest.min.js",
         "categories": ["ui"]
+    },
+    {   
+        "name": "Crank.js",
+        "repo_url": "https://github.com/bikeshaving/crank",
+        "size": "~16 KB",
+        "web_components": false,
+        "cdn_url": "https://unpkg.com/@b9g/crank?module",
+        "categories": ["ui"]
+    },
+    {   
+        "name": "lighterhtml",
+        "repo_url": "https://github.com/WebReflection/lighterhtml",
+        "size": "<2 KB",
+        "web_components": true,
+        "cdn_url": "https://unpkg.com/lighterhtml?module",
+        "categories": ["ui"]
     }
 ]
