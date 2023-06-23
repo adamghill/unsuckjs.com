@@ -193,5 +193,13 @@
         "web_components": true,
         "cdn_url": "https://unpkg.com/lighterhtml?module",
         "categories": ["ui"]
+    },
+    {   
+        "name": "Lithent",
+        "repo_url": "https://github.com/superlucky84/lithent",
+        "size": "3 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/lithent/dist/lithent.umd.js",
+        "categories": ["ui"]
     }
 ]
