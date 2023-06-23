@@ -193,5 +193,13 @@
         "web_components": true,
         "cdn_url": "https://unpkg.com/lighterhtml?module",
         "categories": ["ui"]
+    },
+    {   
+        "name": "swiffy-slider",
+        "repo_url": "https://github.com/dynamicweb/swiffy-slider",
+        "size": "1.02 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/swiffy-slider/dist/js/swiffy-slider.min.js",
+        "categories": ["ui"]
     }
 ]
