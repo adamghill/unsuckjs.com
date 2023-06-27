@@ -5,195 +5,164 @@
 
             <thead>
                 <tr>
-                    <td></td>
-                    {% for library in libraries %}
-                    {% if library.homepage_url %}
-                    <th><a href="{{ library.homepage_url }}">{{ library.name }}</a></th>
-                    {% elif library.repo_url %}
-                    <th><a href="{{ library.repo_url }}">{{ library.name }}</a></th>
-                    {% else %}
-                    <th>{{ library.name }}</th>
-                    {% endif %}
-                    {% endfor %}
+                    <th class="header">Library</th>
+                    <th class="header">Description</th>
+                    <th class="header">Repo</th>
+                    <th class="header">License</th>
+                    <th class="header">Minified Size</th>
+                    <th class="header last-commit">Last commit</th>
+                    <th class="header">Version</th>
+                    <!-- <th class="header">Commits</th> -->
+                    <!-- <th class="header">Authors</th> -->
+                    <th class="header">Stars</th>
+                    <th class="header">Watchers</th>
+                    <th class="header">Forks</th>
+                    <th class="header">Open Issues</th>
+                    <th class="header">CDN</th>
+                    <th class="header">Web Components</th>
+                    <th class="header">IE11 Compatible</th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
-                    <th></th>
-                    {% for library in libraries %}
-                    <th>{{ library.name }}</th>
-                    {% endfor %}
+                    <th class="header">Library</th>
+                    <th class="header">Description</th>
+                    <th class="header">Repo</th>
+                    <th class="header">License</th>
+                    <th class="header">Minified Size</th>
+                    <th class="header">Last commit</th>
+                    <th class="header">Version</th>
+                    <!-- <th class="header">Commits</th> -->
+                    <!-- <th class="header">Authors</th> -->
+                    <th class="header">Stars</th>
+                    <th class="header">Watchers</th>
+                    <th class="header">Forks</th>
+                    <th class="header">Open Issues</th>
+                    <th class="header">CDN</th>
+                    <th class="header">Web Components</th>
+                    <th class="header">IE11 Compatible</th>
                 </tr>
             </tfoot>
             <tbody>
-                <tr>
-                    <td class="header">Description</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
-                    
-                    <td>
-                        {{ metadata.description }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Repo</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                {% for library in libraries %}
+                {% repo library as metadata %}
+                    <tr>
+                        <!-- Library Name -->
+                        <td>
+                            {% if library.homepage_url %}
+                            <a href="{{ library.homepage_url }}">{{ library.name }}</a>
+                            {% elif library.repo_url %}
+                            <a href="{{ library.repo_url }}">{{ library.name }}</a>
+                            {% else %}
+                            {{ library.name }}
+                            {% endif %}
+                        </td>
 
-                    <td>
-                        <a href="{{ library.repo_url }}">
-                            {{ metadata.repo_url_display }}
-                        </a>
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">License</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
 
-                    <td>
-                        {{ metadata.license|default:''|safe }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Minified Size</td>
-                    {% for library in libraries %}
-                    <td>
-                        {{ library.size }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Last commit</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                        <!-- Description -->
+                        <td>
+                            {{ metadata.description }}
+                        </td>
 
-                    <td>
-                        {{ metadata.last_commit|humanize_datetime|default:"--" }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Version</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                        <!-- Repo -->
+                        <td>
+                            <a href="{{ library.repo_url }}">
+                                {{ metadata.repo_url_display }}
+                            </a>
+                        </td>
 
-                    <td>
-                        {% if metadata.latest_tag %}
-                        <a
-                            href="{{ library.repo_url }}/releases/tag/{{ metadata.latest_tag }}">{{ metadata.latest_version|default:"--" }}</a>
-                        {% else %}
-                        {{ metadata.latest_version|default:"--" }}
-                        {% endif %}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <!--<tr>
-                    <td class="header">Commits</td>
-                    {% for library in libraries %}
-                    <td>
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Authors</td>
-                    {% for library in libraries %}
-                    <td>
-                    </td>
-                    {% endfor %}
-                </tr>-->
-                <tr>
-                    <td class="header">Stars</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                        <!-- License -->
+                        <td>
+                            {{ metadata.license|default:''|safe }}
+                        </td>
 
-                    <td>
-                        {{ metadata.stars|humanize_int|default:"--" }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Watchers</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                        <!-- Minified Size -->
+                        <td>
+                            {{ library.size }}
+                        </td>
 
-                    <td>
-                        {{ metadata.watchers|humanize_int|default:"--" }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Forks</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                        <!-- Last Commit -->
+                        <td>
+                            {{ metadata.last_commit|humanize_datetime|default:"--" }}
+                        </td>
 
-                    <td>
-                        {{ metadata.forks|humanize_int|default:"--" }}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Open Issues</td>
-                    {% for library in libraries %}
-                    {% repo library as metadata %}
+                        <!-- Version -->
+                        <td>
+                            {% if metadata.latest_tag %}
+                            <a
+                                href="{{ library.repo_url }}/releases/tag/{{ metadata.latest_tag }}">{{ metadata.latest_version|default:"--" }}</a>
+                            {% else %}
+                            {{ metadata.latest_version|default:"--" }}
+                            {% endif %}
+                        </td>
 
-                    <td>
-                        {% if metadata.open_issues %}
-                        <a
-                            href="{{ library.repo_url }}/issues">{{ metadata.open_issues|humanize_int|default:"--" }}</a>
-                        {% else %}
-                        {{ metadata.open_issues|humanize_int|default:"--" }}</a>
-                        {% endif %}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">CDN</td>
-                    {% for library in libraries %}
-                    <td>
-                        {% if library.cdn_url %}
-                        <a href="{{ library.cdn_url }}">{{ library.cdn_url|cut:'https://'|truncatechars:10 }}</a>
-                        {% else %}
-                        --
-                        {% endif %}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td class="header">Web Components</td>
-                    {% for library in libraries %}
-                    <td style="vertical-align: middle;">
-                        {% if library.web_components is True %}
-                        <div class="pos">
-                            <img src="{% static 'svg/check.svg' %}">
-                        </div>
-                        {% elif library.web_components is False %}
-                        <div class="neg">
-                            <img src="{% static 'svg/x.svg' %}">
-                        </div>
-                        {% endif %}
-                    </td>
-                    {% endfor %}
-                </tr>
-                <tr>
-                    <td  class="header">IE11 Compatible</td>
-                    {% for library in libraries %}
-                    <td style="vertical-align: middle;">
-                        {% if library.ie11_compatible is True %}
-                        <div class="pos">
-                            <img src="{% static 'svg/check.svg' %}">
-                        </div>
-                        {% elif library.ie11_compatible is False %}
-                        <div class="neg">
-                            <img src="{% static 'svg/x.svg' %}">
-                        </div>
-                        {% endif %}
-                    </td>
-                    {% endfor %}
-                </tr>
+                        <!-- Commits -->
+                        <!-- <td></td> -->
+
+                        <!-- Authors -->
+                        <!-- <td></td> -->
+
+                        <!-- Stars -->
+                        <td>
+                            {{ metadata.stars|humanize_int|default:"--" }}
+                        </td>
+
+                        <!-- Watchers -->
+                        <td>
+                            {{ metadata.watchers|humanize_int|default:"--" }}
+                        </td>
+
+                        <!-- Forks -->
+                        <td>
+                            {{ metadata.forks|humanize_int|default:"--" }}
+                        </td>
+
+                        <!-- Open Issues -->
+                        <td>
+                            {% if metadata.open_issues %}
+                            <a
+                                href="{{ library.repo_url }}/issues">{{ metadata.open_issues|humanize_int|default:"--" }}</a>
+                            {% else %}
+                            {{ metadata.open_issues|humanize_int|default:"--" }}</a>
+                            {% endif %}
+                        </td>
+
+                        <!-- CDN -->
+                        <td>
+                            {% if library.cdn_url %}
+                            <a href="{{ library.cdn_url }}">{{ library.cdn_url|cut:'https://'|truncatechars:10 }}</a>
+                            {% else %}
+                            --
+                            {% endif %}
+                        </td>
+
+                        <!-- Web Components -->
+                        <td style="vertical-align: middle;">
+                            {% if library.web_components is True %}
+                            <div class="pos">
+                                <img src="{% static 'svg/check.svg' %}">
+                            </div>
+                            {% elif library.web_components is False %}
+                            <div class="neg">
+                                <img src="{% static 'svg/x.svg' %}">
+                            </div>
+                            {% endif %}
+                        </td>
+
+                        <!-- IE11 Compatible -->
+                        <td style="vertical-align: middle;">
+                            {% if library.ie11_compatible is True %}
+                            <div class="pos">
+                                <img src="{% static 'svg/check.svg' %}">
+                            </div>
+                            {% elif library.ie11_compatible is False %}
+                            <div class="neg">
+                                <img src="{% static 'svg/x.svg' %}">
+                            </div>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
