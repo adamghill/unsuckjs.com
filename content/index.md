@@ -48,7 +48,7 @@
                 {% repo library as metadata %}
                     <tr>
                         <!-- Library Name -->
-                        <td>
+                        <th>
                             {% if library.homepage_url %}
                             <a href="{{ library.homepage_url }}">{{ library.name }}</a>
                             {% elif library.repo_url %}
@@ -56,8 +56,7 @@
                             {% else %}
                             {{ library.name }}
                             {% endif %}
-                        </td>
-
+                        </th>
 
                         <!-- Description -->
                         <td>
