@@ -193,5 +193,13 @@
         "web_components": true,
         "cdn_url": "https://unpkg.com/lighterhtml?module",
         "categories": ["ui"]
+    },
+    {
+        "name": "reef",
+        "repo_url": "https://github.com/cferdinandi/reef",
+        "size": "~4.2 KB (1.6 KB gzip)",        
+        "cdn_url": "https://cdn.jsdelivr.net/npm/reefjs@12/dist/reef.min.js",
+        "web_components": false,        
+        "categories": ["ui"]        
     }
 ]
