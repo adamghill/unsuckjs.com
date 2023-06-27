@@ -33,4 +33,6 @@ Also, because it's my site and I wanted to. 🥹
 1. Clone this repo
 2. `cd` into newly created directory
 3. `poetry install`
-4. `poetry run coltrane play`
+4. `poetry run coltrane play`, or if you haven't setup GitHub personal token yet:
+   1. create a token at https://github.com/settings/tokens
+   2. `SECRET_KEY="*" GITHUB_USERNAME=[username] GITHUB_PERSONAL_ACCESS_TOKEN=[token] poetry run coltrane play`
