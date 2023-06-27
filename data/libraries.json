@@ -15,6 +15,14 @@
         "categories": ["ui"]
     },
     {
+        "name": "base-custom-webcomponent",
+        "repo_url": "https://github.com/node-projects/base-custom-webcomponent",
+        "size": "~5 KB",
+        "web_components": true,
+        "cdn_url": "https://unpkg.com/@node-projects/base-custom-webcomponent",
+        "categories": ["ui"]
+    },    
+    {
         "name": "Mithril",
         "repo_url": "https://github.com/MithrilJS/mithril.js",
         "size": "~9.5 KB",
