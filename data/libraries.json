@@ -197,11 +197,11 @@
     {
         "name": "reef",
         "repo_url": "https://github.com/cferdinandi/reef",
-        "size": "~4.2 KB (1.6 KB gzip)",        
+        "size": "1.6 KB",
         "cdn_url": "https://cdn.jsdelivr.net/npm/reefjs@12/dist/reef.min.js",
         "web_components": false,
         "ie11_compatible": false,
-        "categories": ["ui"]        
+        "categories": ["ui"]
     },
     {
         "name": "tmpl-htm",
