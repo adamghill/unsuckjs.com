@@ -11,8 +11,6 @@
                     <th class="header">Gzipped Size</th>
                     <th class="header last-commit">Last commit</th>
                     <th class="header" style="min-width: 100px;">Version</th>
-                    <!-- <th class="header">Commits</th> -->
-                    <!-- <th class="header">Authors</th> -->
                     <th class="header">Stars</th>
                     <th class="header">Watchers</th>
                     <th class="header">Forks</th>
@@ -29,8 +27,6 @@
                     <th class="header">Gzipped Size</th>
                     <th class="header">Last commit</th>
                     <th class="header">Version</th>
-                    <!-- <th class="header">Commits</th> -->
-                    <!-- <th class="header">Authors</th> -->
                     <th class="header">Stars</th>
                     <th class="header">Watchers</th>
                     <th class="header">Forks</th>
@@ -45,7 +41,7 @@
                     <tr>
                         <td>
                             <!-- Library Name -->
-                            <div class="header">
+                            <div class="header" style="padding-bottom: 12px;">
                                 {% if library.homepage_url %}
                                 <a href="{{ library.homepage_url }}">{{ library.name }}</a>
                                 {% elif library.repo_url %}
@@ -56,21 +52,19 @@
                             </div>
 
                             {% if library.repo_url %}
-                            <div style="padding-top: 6px;">
-                                <img src="{% static 'svg/github.svg' %}" class="icon">
-                                <a href="{{ library.repo_url }}" class="repo_url_display">
-                                    {{ metadata.repo_url_display }}
+                            <span>
+                                <a href="{{ library.repo_url }}">
+                                    <img src="{% static 'svg/github.svg' %}" class="">
                                 </a>
-                            </div>
+                            </span>
                             {% endif %}
 
                             {% if library.cdn_url %}
-                            <div style="padding-top: 6px;">
-                                <img src="{% static 'svg/globe.svg' %}" class="icon">
+                            <span>
                                 <a href="{{ library.cdn_url }}">
-                                    {{ library.cdn_url|cut:'https://'|truncatechars:10 }}
+                                    <img src="{% static 'svg/globe.svg' %}" class="">
                                 </a>
-                            </div>
+                            </span>
                             {% endif %}
                         </td>
 
@@ -103,12 +97,6 @@
                             {{ metadata.latest_version|truncatechars:14|default:"--" }}
                             {% endif %}
                         </td>
-
-                        <!-- Commits -->
-                        <!-- <td></td> -->
-
-                        <!-- Authors -->
-                        <!-- <td></td> -->
 
                         <!-- Stars -->
                         <td>
