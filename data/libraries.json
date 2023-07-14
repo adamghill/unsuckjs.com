@@ -201,5 +201,22 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/npm/lithent/dist/lithent.umd.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "reef",
+        "repo_url": "https://github.com/cferdinandi/reef",
+        "size": "1.6 KB",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/reefjs@12/dist/reef.min.js",
+        "web_components": false,
+        "ie11_compatible": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "tmpl-htm",
+        "repo_url": "https://github.com/superlucky84/tmpl-htm",
+        "size": "1.9 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm@1.0.1/dist/tmplHtm.umd.js",
+        "categories": ["ui"]
     }
 ]
