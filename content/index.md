@@ -6,19 +6,17 @@
             <thead>
                 <tr>
                     <th class="header">Library</th>
-                    <th class="header">Description</th>
-                    <th class="header">Repo</th>
+                    <th class="header" style="min-width: 250px;">Description</th>
                     <th class="header">License</th>
-                    <th class="header">Minified Size</th>
+                    <th class="header">Gzipped Size</th>
                     <th class="header last-commit">Last commit</th>
-                    <th class="header">Version</th>
+                    <th class="header" style="min-width: 100px;">Version</th>
                     <!-- <th class="header">Commits</th> -->
                     <!-- <th class="header">Authors</th> -->
                     <th class="header">Stars</th>
                     <th class="header">Watchers</th>
                     <th class="header">Forks</th>
                     <th class="header">Open Issues</th>
-                    <th class="header">CDN</th>
                     <th class="header">Web Components</th>
                     <th class="header">IE11 Compatible</th>
                 </tr>
@@ -27,9 +25,8 @@
                 <tr>
                     <th class="header">Library</th>
                     <th class="header">Description</th>
-                    <th class="header">Repo</th>
                     <th class="header">License</th>
-                    <th class="header">Minified Size</th>
+                    <th class="header">Gzipped Size</th>
                     <th class="header">Last commit</th>
                     <th class="header">Version</th>
                     <!-- <th class="header">Commits</th> -->
@@ -38,7 +35,6 @@
                     <th class="header">Watchers</th>
                     <th class="header">Forks</th>
                     <th class="header">Open Issues</th>
-                    <th class="header">CDN</th>
                     <th class="header">Web Components</th>
                     <th class="header">IE11 Compatible</th>
                 </tr>
@@ -47,27 +43,40 @@
                 {% for library in libraries %}
                 {% repo library as metadata %}
                     <tr>
-                        <!-- Library Name -->
-                        <th>
-                            {% if library.homepage_url %}
-                            <a href="{{ library.homepage_url }}">{{ library.name }}</a>
-                            {% elif library.repo_url %}
-                            <a href="{{ library.repo_url }}">{{ library.name }}</a>
-                            {% else %}
-                            {{ library.name }}
+                        <td>
+                            <!-- Library Name -->
+                            <div class="header">
+                                {% if library.homepage_url %}
+                                <a href="{{ library.homepage_url }}">{{ library.name }}</a>
+                                {% elif library.repo_url %}
+                                <a href="{{ library.repo_url }}">{{ library.name }}</a>
+                                {% else %}
+                                {{ library.name }}
+                                {% endif %}
+                            </div>
+
+                            {% if library.repo_url %}
+                            <div style="padding-top: 6px;">
+                                <img src="{% static 'svg/github.svg' %}" class="icon">
+                                <a href="{{ library.repo_url }}" class="repo_url_display">
+                                    {{ metadata.repo_url_display }}
+                                </a>
+                            </div>
                             {% endif %}
-                        </th>
+
+                            {% if library.cdn_url %}
+                            <div style="padding-top: 6px;">
+                                <img src="{% static 'svg/globe.svg' %}" class="icon">
+                                <a href="{{ library.cdn_url }}">
+                                    {{ library.cdn_url|cut:'https://'|truncatechars:10 }}
+                                </a>
+                            </div>
+                            {% endif %}
+                        </td>
 
                         <!-- Description -->
                         <td>
                             {{ metadata.description }}
-                        </td>
-
-                        <!-- Repo -->
-                        <td>
-                            <a href="{{ library.repo_url }}">
-                                {{ metadata.repo_url_display }}
-                            </a>
                         </td>
 
                         <!-- License -->
@@ -89,9 +98,9 @@
                         <td>
                             {% if metadata.latest_tag %}
                             <a
-                                href="{{ library.repo_url }}/releases/tag/{{ metadata.latest_tag }}">{{ metadata.latest_version|default:"--" }}</a>
+                                href="{{ library.repo_url }}/releases/tag/{{ metadata.latest_tag }}">{{ metadata.latest_version|truncatechars:14|default:"--" }}</a>
                             {% else %}
-                            {{ metadata.latest_version|default:"--" }}
+                            {{ metadata.latest_version|truncatechars:14|default:"--" }}
                             {% endif %}
                         </td>
 
@@ -123,15 +132,6 @@
                                 href="{{ library.repo_url }}/issues">{{ metadata.open_issues|humanize_int|default:"--" }}</a>
                             {% else %}
                             {{ metadata.open_issues|humanize_int|default:"--" }}</a>
-                            {% endif %}
-                        </td>
-
-                        <!-- CDN -->
-                        <td>
-                            {% if library.cdn_url %}
-                            <a href="{{ library.cdn_url }}">{{ library.cdn_url|cut:'https://'|truncatechars:10 }}</a>
-                            {% else %}
-                            --
                             {% endif %}
                         </td>
 

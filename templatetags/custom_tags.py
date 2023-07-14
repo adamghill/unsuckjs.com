@@ -71,8 +71,10 @@ def _get_github_metadata(repo_name: str) -> Dict:
         metadata["forks"] = repo.get("forks")
         metadata["open_issues"] = repo.get("open_issues")
 
-        metadata["repo_url_display"] = repo_url.replace("https://", "").replace(
-            "github.com/", ""
+        metadata["repo_url_display"] = (
+            repo_url.replace("https://api.github.com/repos/", "")
+            .replace("https://", "")
+            .replace("github.com/", "")
         )
 
         license = repo.get("license") or {}
