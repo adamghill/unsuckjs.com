@@ -202,5 +202,13 @@
         "web_components": false,
         "ie11_compatible": false,
         "categories": ["ui"]        
+    },
+    {
+        "name": "tmpl-htm",
+        "repo_url": "https://github.com/superlucky84/tmpl-htm",
+        "size": "1.9 KB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm@1.0.1/dist/tmplHtm.umd.js",
+        "categories": ["ui"]
     }
 ]
