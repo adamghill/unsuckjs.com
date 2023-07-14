@@ -13,10 +13,10 @@ Yeah, probably.
 ## 🛠️ Add a new library
 
 1. Fork this repo
-2. Update `data/libraries.json` following the current examples
-3. Make a PR
-4. ???
-5. Profit!
+1. Update `data/libraries.json` following the current examples
+1. Make a PR
+1. ???
+1. Profit!
 
 ## 🤓 Why use `coltrane` to build this site?
 
@@ -30,7 +30,10 @@ Also, because it's my site and I wanted to. 🥹
 
 ## 🔬 Local development
 
-1. Clone this repo
-2. `cd` into newly created directory
-3. `poetry install`
-4. `poetry run coltrane play`
+1. `git clone` this repo
+1. `cd` into the newly created directory
+1. `poetry install`
+1. Create a personal access token at https://github.com/settings/tokens
+1. `cp .env.example .env`
+1. Update `.env` with your GitHub username and personal access token that was just created
+1. `poetry run coltrane play`
