@@ -165,7 +165,7 @@
     {
         "name": "Tram-Lite",
         "repo_url": "https://github.com/Tram-One/tram-lite",
-        "size": "1.3 KB",
+        "size": "1.6 KB",
         "web_components": true,
         "cdn_url": "https://unpkg.com/tram-lite",
         "categories": ["ui"]
