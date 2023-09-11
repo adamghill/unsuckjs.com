@@ -1,5 +1,13 @@
 [
     {
+        "name": "Realm",
+        "repo_url": "https://github.com/realmorg/realm",
+        "size": "~12 KB - ~20 KB",        
+        "cdn_url": "https://unpkg.com/@realmorg/realm@0.0.17/dist/realm.production.min.js",
+        "web_components": true,        
+        "categories": ["ui"]        
+    },
+    {
         "name": "RE:DOM",
         "repo_url": "https://github.com/redom/redom",
         "size": "~2 KB",        
