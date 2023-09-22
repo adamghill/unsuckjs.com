@@ -1,5 +1,21 @@
 [
     {
+        "name": "Bindux",
+        "repo_url": "https://github.com/bindux/bindux",
+        "size": "~7 KB",    
+        "cdn_url": "https://unpkg.com/bindux@0.0.1-alpha/dist/bindux.min.js",
+        "web_components": false,        
+        "categories": ["ui"]        
+    },
+    {
+        "name": "Core Stack",
+        "repo_url": "https://github.com/Nicolab/core-stack",
+        "size": "~2 KB",        
+        "cdn_url": "https://unpkg.com/core-stack@0.2.0/dist/index.js",
+        "web_components": false,        
+        "categories": ["ui"]        
+    },
+    {
         "name": "Realm",
         "repo_url": "https://github.com/realmorg/realm",
         "size": "~12 KB - ~20 KB",        
