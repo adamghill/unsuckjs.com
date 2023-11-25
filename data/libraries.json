@@ -226,5 +226,14 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm@1.0.1/dist/tmplHtm.umd.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "Alpine AJAX",
+        "repo_url": "https://github.com/imacrayon/alpine-ajax",
+        "size": "~4 KB",
+        "ie11_compatible": false,
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/@imacrayon/alpine-ajax",
+        "categories": ["ui", "ajax"]
     }
 ]
