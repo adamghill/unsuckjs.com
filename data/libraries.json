@@ -211,6 +211,14 @@
         "categories": ["ui"]
     },
     {   
+        "name": "µhtml",
+        "repo_url": "https://github.com/WebReflection/uhtml",
+        "size": "<3 KB",
+        "web_components": true,
+        "cdn_url": "https://unpkg.com/uhtml",
+        "categories": ["ui"]
+    },
+    {   
         "name": "Lithent",
         "repo_url": "https://github.com/superlucky84/lithent",
         "size": "3 KB",
