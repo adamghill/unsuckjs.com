@@ -13,8 +13,17 @@ logger = logging.getLogger(__name__)
 
 def _get_data(url: str) -> Dict:
     res = httpx.get(
-        url, auth=(settings.GITHUB_USERNAME, settings.GITHUB_PERSONAL_ACCESS_TOKEN)
+        url, auth=(settings.GITHUB_USERNAME, settings.GITHUB_PERSONAL_ACCESS_TOKEN),
+        follow_redirects=False,
     )
+
+    if res.status_code in (301, 302):
+        logger.error(f"Redirect detected for: {url}; redirecting to {res.next_request.url}")
+
+        res = httpx.get(
+            url, auth=(settings.GITHUB_USERNAME, settings.GITHUB_PERSONAL_ACCESS_TOKEN),
+            follow_redirects=True,
+        )
 
     if res.is_error:
         logger.error(res.text)
@@ -36,7 +45,7 @@ def get_last_commit(repo_name: str) -> Optional[str]:
     commit_url = f"https://api.github.com/repos/{repo_name}/commits?page=1&per_page=1"
     commits = _get_data(commit_url)
 
-    if commits:
+    if commits and isinstance(commits, list):
         # Grab the first result because that's all we ever care about
         latest_commit = commits[0]
 
@@ -67,7 +76,7 @@ def get_latest_release(repo_name: str) -> Optional[Dict]:
     )
     releases = _get_data(releases_url)
 
-    if releases:
+    if releases and isinstance(releases, list):
         return releases[0]
 
 
