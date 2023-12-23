@@ -2,25 +2,31 @@
     {
         "name": "Realm",
         "repo_url": "https://github.com/realmorg/realm",
-        "size": "~12 KB - ~20 KB",        
+        "size": "~12 KB - ~20 KB",
         "cdn_url": "https://unpkg.com/@realmorg/realm@0.0.17/dist/realm.production.min.js",
-        "web_components": true,        
-        "categories": ["ui"]        
+        "web_components": true,
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "RE:DOM",
         "repo_url": "https://github.com/redom/redom",
-        "size": "~2 KB",        
+        "size": "~2 KB",
         "cdn_url": "https://redom.js.org/redom.min.js",
-        "web_components": false,        
-        "categories": ["ui"]        
+        "web_components": false,
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "Alpine.js",
         "repo_url": "https://github.com/alpinejs/alpine",
         "size": "~12 KB",
         "cdn_url": "https://unpkg.com/alpinejs",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "Mithril",
@@ -28,7 +34,9 @@
         "size": "~9.5 KB",
         "ie11_compatible": true,
         "cdn_url": "https://unpkg.com/mithril",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "htmx",
@@ -36,14 +44,19 @@
         "size": "~10 KB",
         "ie11_compatible": true,
         "cdn_url": "https://unpkg.com/htmx.org",
-        "categories": ["ui", "ajax"]
+        "categories": [
+            "ui",
+            "ajax"
+        ]
     },
     {
         "name": "petite-vue",
         "repo_url": "https://github.com/vuejs/petite-vue",
         "size": "~5.8 KB",
         "cdn_url": "https://unpkg.com/petite-vue",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "Litedom",
@@ -51,28 +64,39 @@
         "size": "~3 KB",
         "cdn_url": "https://unpkg.com/litedom",
         "web_components": true,
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "CalDOM",
         "repo_url": "https://github.com/dumijay/CalDom",
         "size": "~3 KB",
         "cdn_url": "https://unpkg.com/caldom",
-        "categories": ["ui", "dom"]
+        "categories": [
+            "ui",
+            "dom"
+        ]
     },
     {
         "name": "bdc-js",
         "repo_url": "https://github.com/bwhmather/bdc-js",
         "size": "~1 KB",
         "cdn_url": "https://github.com/bwhmather/bdc-js/releases/download/v1.0.0/bdc.min.js",
-        "categories": ["ui", "dom"]
+        "categories": [
+            "ui",
+            "dom"
+        ]
     },
     {
         "name": "diffHTML",
         "repo_url": "https://github.com/tbranyen/diffhtml",
         "size": "8 KB - 11 KB",
         "cdn_url": "https://unpkg.com/diffhtml/dist/diffhtml.min.js",
-        "categories": ["ui", "dom"]
+        "categories": [
+            "ui",
+            "dom"
+        ]
     },
     {
         "name": "dlite",
@@ -80,13 +104,17 @@
         "size": "<5 KB",
         "cdn_url": "https://unpkg.com/dlite",
         "web_components": true,
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "spræ",
         "repo_url": "https://github.com/dy/sprae",
         "size": "~5 KB",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "lit",
@@ -95,7 +123,9 @@
         "web_components": true,
         "ie11_compatible": true,
         "cdn_url": "https://cdn.jsdelivr.net/gh/lit/dist/core/lit-core.min.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "strawberry",
@@ -103,7 +133,9 @@
         "size": "~5 KB",
         "web_components": true,
         "cdn_url": "https://unpkg.com/sberry/dist/sb.min.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "ponys",
@@ -111,7 +143,9 @@
         "size": "<2 KB",
         "web_components": true,
         "cdn_url": "https://cdn.jsdelivr.net/gh/jhuddle/ponys/miniature-ponys.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "dom-proxy",
@@ -119,7 +153,9 @@
         "size": "<9 KB",
         "web_components": true,
         "cdn_url": "https://cdn.jsdelivr.net/npm/dom-proxy/browser.min.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "reken",
@@ -127,7 +163,9 @@
         "size": "5 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "preact",
@@ -136,7 +174,9 @@
         "web_components": true,
         "ie11_compatible": true,
         "cdn_url": null,
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "VanJS",
@@ -144,7 +184,9 @@
         "size": "0.8 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-0.12.2.min.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "hyperapp",
@@ -152,7 +194,9 @@
         "size": "1 KB",
         "web_components": false,
         "cdn_url": "https://unpkg.com/hyperapp",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "TwinSpark",
@@ -160,7 +204,9 @@
         "size": "8 KB",
         "web_components": false,
         "cdn_url": "https://github.com/piranha/twinspark-js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "data-template",
@@ -168,7 +214,9 @@
         "size": "1.2 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/npm/data-template/base.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "Tram-Lite",
@@ -176,39 +224,49 @@
         "size": "1.6 KB",
         "web_components": true,
         "cdn_url": "https://unpkg.com/tram-lite",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
-    {   
+    {
         "name": "Bau",
         "repo_url": "https://github.com/grucloud/bau",
         "size": "1.6 KB",
         "web_components": false,
         "cdn_url": "https://unpkg.com/@grucloud/bau",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
-    {   
+    {
         "name": "Crank.js",
         "repo_url": "https://github.com/bikeshaving/crank",
         "size": "~16 KB",
         "web_components": false,
         "cdn_url": "https://unpkg.com/@b9g/crank?module",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
-    {   
+    {
         "name": "lighterhtml",
         "repo_url": "https://github.com/WebReflection/lighterhtml",
         "size": "<2 KB",
         "web_components": true,
         "cdn_url": "https://unpkg.com/lighterhtml?module",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
-    {   
+    {
         "name": "Lithent",
         "repo_url": "https://github.com/superlucky84/lithent",
         "size": "3 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/npm/lithent/dist/lithent.umd.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "reef",
@@ -217,7 +275,9 @@
         "cdn_url": "https://cdn.jsdelivr.net/npm/reefjs@12/dist/reef.min.js",
         "web_components": false,
         "ie11_compatible": false,
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
     },
     {
         "name": "tmpl-htm",
@@ -225,6 +285,18 @@
         "size": "1.9 KB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm@1.0.1/dist/tmplHtm.umd.js",
-        "categories": ["ui"]
+        "categories": [
+            "ui"
+        ]
+    },
+    {
+        "name": "mithril-js",
+        "repo_url": "https://mithril.js.org",
+        "size": "9.5 KB",
+        "web_components": false,
+        "cdn_url": "https://cdnjs.cloudflare.com/ajax/libs/mithril/2.2.3/mithril.min.js",
+        "categories": [
+            "ui"
+        ]
     }
 ]
