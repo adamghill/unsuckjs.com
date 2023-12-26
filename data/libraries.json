@@ -226,5 +226,12 @@
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm@1.0.1/dist/tmplHtm.umd.js",
         "categories": ["ui"]
+    },
+    {
+        "name": "conjure",
+        "repo_url": "https://github.com/adamghill/conjure",
+        "size": "<1 KB",
+        "web_components": false,
+        "categories": ["ui"]
     }
 ]
