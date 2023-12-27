@@ -233,5 +233,13 @@
         "size": "<1 KB",
         "web_components": false,
         "categories": ["ui"]
-    }
+    },
+    {
+        "name": "arrow-js",
+        "repo_url": "https://github.com/justin-schroeder/arrow-js",
+        "size": "~2 KB",
+        "web_components": false,
+        "cdn_url": "https://esm.sh/@arrow-js/core",
+        "categories": ["ui"]
+    },
 ]
