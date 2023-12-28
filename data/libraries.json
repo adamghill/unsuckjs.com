@@ -233,5 +233,12 @@
         "size": "<1 KB",
         "web_components": false,
         "categories": ["ui"]
+    },
+    {
+        "name": "fre",
+        "repo_url": "https://github.com/frejs/fre",
+        "size": "~2 KB",
+        "web_components": false,
+        "categories": ["ui"]
     }
 ]
