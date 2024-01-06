@@ -241,5 +241,5 @@
         "web_components": false,
         "cdn_url": "https://esm.sh/@arrow-js/core",
         "categories": ["ui"]
-    },
+    }
 ]
