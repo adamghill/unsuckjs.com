@@ -8,6 +8,14 @@
         "categories": ["ui"]        
     },
     {
+        "name": "Facet",
+        "repo_url": "https://github.com/kgscialdone/facet",
+        "size": "~5.74 KB - ~10.1 KB",        
+        "cdn_url": "https://cdn.jsdelivr.net/gh/kgscialdone/facet@0.1.2a/facet.min.js",
+        "web_components": true,        
+        "categories": ["ui", "dom"] 
+    },
+    {
         "name": "RE:DOM",
         "repo_url": "https://github.com/redom/redom",
         "size": "~2 KB",        
