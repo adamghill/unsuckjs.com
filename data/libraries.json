@@ -149,14 +149,14 @@
     {
         "name": "VanJS",
         "repo_url": "https://github.com/vanjs-org/van",
-        "size": "0.8 KB",
+        "size": "1.4 KB",
         "web_components": false,
-        "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-0.12.2.min.js",
+        "cdn_url": "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-latest.min.js",
         "categories": ["ui"]
     },
     {
         "name": "hyperapp",
-        "repo_url": "https://github.com/jorgebucaran/hyperapp",
+        "repo_url": "https://github.com/joxji/hyperapp",
         "size": "1 KB",
         "web_components": false,
         "cdn_url": "https://unpkg.com/hyperapp",
@@ -240,7 +240,7 @@
         "repo_url": "https://github.com/superlucky84/tmpl-htm",
         "size": "1.9 KB",
         "web_components": false,
-        "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm@1.0.1/dist/tmplHtm.umd.js",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/tmpl-htm",
         "categories": ["ui"]
     },
     {
@@ -257,5 +257,13 @@
         "web_components": false,
         "cdn_url": "https://esm.sh/@arrow-js/core",
         "categories": ["ui"]
-    }
+    },
+    {
+        "name": "minijs",
+        "repo_url": "https://github.com/Group-One-Technology/minijs",
+        "size": null,
+        "web_components": false,
+        "cdn_url": null,
+        "categories": ["ui"]
+    },
 ]
