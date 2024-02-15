@@ -6,7 +6,7 @@ authors = ["adamghill <adamghill@yahoo.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-coltrane-web = {extras = ["deploy"], version = "<1"}
+coltrane = {extras = ["deploy", "json5"], version = "<1"}
 iso8601 = "^1.0.2"
 django-cache-memoize = "^0.1.10"
 python-benedict = "^0.25.2"

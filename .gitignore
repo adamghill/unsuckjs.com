@@ -130,3 +130,6 @@ dmypy.json
 
 deploykey
 deploykey.pub
+
+.DS_Store
+.vscode
