@@ -1,0 +1,56 @@
+td div.pos {
+  color: green;
+  width: 20px;
+  font-weight: 700;
+}
+
+td div.neg {
+  color: red;
+  width: 20px;
+}
+
+.centered {
+  text-align: center !important;
+}
+
+.table {
+  border: 1px #ccc solid;
+}
+
+.callout {
+  border: 1px #ccc solid;
+  background: #f2f2f2;
+  margin: 0px 3rem 0px 3rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.container {
+  margin-left: 0px;
+}
+
+.header.last-commit {
+  min-width: 8em;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.info {
+  cursor: help;
+  color: grey;
+  font-weight: normal;
+}
+
+.info::before {
+  content: '\27AF  ';
+}
+
+.icon {
+  position: absolute;
+}
+
+.icon+a {
+  padding-left: 28px;
+}

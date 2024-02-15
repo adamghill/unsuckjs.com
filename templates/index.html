@@ -73,7 +73,7 @@
 
                     <!-- Description -->
                     <td>
-                        {{ metadata.description|default:'' }}
+                        {{ metadata.description|default:'--' }}
                     </td>
 
                     <!-- License -->
@@ -126,28 +126,32 @@
                     </td>
 
                     <!-- Web Components -->
-                    <td style="vertical-align: middle;">
+                    <td>
                         {% if library.web_components is True %}
                         <div class="pos">
-                            <img src="{% static 'svg/check.svg' %}">
+                            ✓
                         </div>
                         {% elif library.web_components is False %}
                         <div class="neg">
-                            <img src="{% static 'svg/x.svg' %}">
+                            ❌
                         </div>
+                        {% else %}
+                        🤷
                         {% endif %}
                     </td>
 
                     <!-- IE11 Compatible -->
-                    <td style="vertical-align: middle;">
+                    <td>
                         {% if library.ie11_compatible is True %}
                         <div class="pos">
-                            <img src="{% static 'svg/check.svg' %}">
+                            ✓
                         </div>
                         {% elif library.ie11_compatible is False %}
                         <div class="neg">
-                            <img src="{% static 'svg/x.svg' %}">
+                            ❌
                         </div>
+                        {% else %}
+                        🤷
                         {% endif %}
                     </td>
                 </tr>
