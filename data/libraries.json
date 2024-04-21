@@ -283,7 +283,7 @@
         "categories": ["ui"]
     },
     {
-        "name": "unpoly",
+        "name": "Unpoly",
         "repo_url": "https://github.com/unpoly/unpoly",
         "size": "~50 KB",
         "web_components": false,
