@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "unsuckjs.com-coltrane"
+name = "unsuckjs.com"
 version = "0.1.0"
 description = ""
 authors = ["adamghill <adamghill@yahoo.com>"]
@@ -16,12 +16,11 @@ hiredis = "^2.0.0"
 redis = "^4.3.5"
 
 [tool.poetry.dev-dependencies]
-isort = "^5.10.1"
-black = "^22.6.0"
-pytest = "^7.1.2"
+ruff = "*"
 
 [tool.poe.tasks]
 r = { cmd = "poetry run coltrane play", help = "Start dev server" }
+build = { cmd = "uncss http://localhost:8000 --output static/css/unsuckjs.min.css", help = "Build minified css" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
