@@ -5,8 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UnsuckJS</title>
+
+  {% if DEBUG %}
   <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css">
+  {% else %}
+  <link rel="stylesheet" href="{% static 'css/unsuckjs.min.css' %}">
+  {% endif %}
 
   <style>
 
