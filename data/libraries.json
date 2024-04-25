@@ -266,4 +266,28 @@
         "cdn_url": null,
         "categories": ["ui"]
     },
+    {
+        "name": "Stimulus",
+        "repo_url": "https://github.com/hotwired/stimulus",
+        "size": "~12 KB",
+        "web_components": false,
+        "cdn_url": null,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Turbo",
+        "repo_url": "https://github.com/hotwired/turbo",
+        "size": "~24 KB",
+        "web_components": false,
+        "cdn_url": null,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Unpoly",
+        "repo_url": "https://github.com/unpoly/unpoly",
+        "size": "~50 KB",
+        "web_components": false,
+        "cdn_url": null,
+        "categories": ["ui"]
+    }
 ]
