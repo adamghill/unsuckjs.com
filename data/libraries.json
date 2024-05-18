@@ -266,4 +266,12 @@
         "cdn_url": null,
         "categories": ["ui"]
     },
+    {
+        "name": "Unpoly",
+        "repo_url": "https://github.com/unpoly/unpoly",
+        "size": "~50kb",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/unpoly@3.7.3/unpoly.min.js",
+        "categories": ["ui", "ajax"]
+    }
 ]
