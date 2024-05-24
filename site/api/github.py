@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def _get_data(url: str) -> Dict:
     res = httpx.get(
-        url, auth=(settings.GITHUB_USERNAME, settings.GITHUB_PERSONAL_ACCESS_TOKEN),
+        url, auth=(settings.ENV["GITHUB_USERNAME"], settings.ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]),
         follow_redirects=False,
     )
 
@@ -21,7 +21,7 @@ def _get_data(url: str) -> Dict:
         logger.error(f"Redirect detected for: {url}; redirecting to {res.next_request.url}")
 
         res = httpx.get(
-            url, auth=(settings.GITHUB_USERNAME, settings.GITHUB_PERSONAL_ACCESS_TOKEN),
+            url, auth=(settings.ENV["GITHUB_USERNAME"], settings.ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]),
             follow_redirects=True,
         )
 

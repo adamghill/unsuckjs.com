@@ -32,11 +32,11 @@ Also, because it's my site and I wanted to. 🥹
 
 1. `git clone` this repo
 1. `cd` into the newly created directory
-1. `poetry install`
+1. `uv install -r pyproject.toml`
 1. Create a personal access token at https://github.com/settings/tokens
 1. `cp .env.example .env`
 1. Update `.env` with your GitHub username and personal access token that was just created
-1. `poetry run coltrane play`
+1. `uv run coltrane play`
 
 ## Minify CSS
 
