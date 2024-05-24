@@ -1,27 +1,18 @@
-[tool.poetry]
-name = "unsuckjs.com"
+[project]
+name = "site"
 version = "0.1.0"
-description = ""
-authors = ["adamghill <adamghill@yahoo.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.10"
-coltrane = {extras = ["deploy", "json5"], version = "<1"}
-iso8601 = "^1.0.2"
-django-cache-memoize = "^0.1.10"
-python-benedict = "^0.25.2"
-httpx = "^0.23.0"
-gunicorn = "^20.1.0"
-hiredis = "^2.0.0"
-redis = "^4.3.5"
-
-[tool.poetry.dev-dependencies]
-ruff = "*"
-
-[tool.poe.tasks]
-r = { cmd = "poetry run coltrane play", help = "Start dev server" }
-build = { cmd = "uncss http://localhost:8000 --output static/css/unsuckjs.min.css", help = "Build minified css" }
+dependencies = [
+    "coltrane[deploy, json5, compressor] < 1",
+    "iso8601 < 3",
+    "django-cache-memoize < 1",
+    "python-benedict < 1",
+    "httpx < 1",
+    "gunicorn < 21",
+    "hiredis < 3",
+    "redis < 5"
+]
+requires-python = ">=3.10"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

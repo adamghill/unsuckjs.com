@@ -1,45 +1,44 @@
-# Creating a python base with shared environment variables
-FROM python:3.10.8-slim as python-base
-ENV PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1 \
-    PIP_NO_CACHE_DIR=off \
-    PIP_DISABLE_PIP_VERSION_CHECK=on \
-    PIP_DEFAULT_TIMEOUT=100 \
-    POETRY_HOME="/opt/poetry" \
-    POETRY_VIRTUALENVS_IN_PROJECT=true \
-    POETRY_NO_INTERACTION=1 \
-    PYSETUP_PATH="/opt/pysetup" \
-    VENV_PATH="/opt/pysetup/.venv"
+# Layer with Python and some shared environment variables
+FROM python:3.10-slim as python
 
-ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PATH=".venv/bin:$PATH"
 
 
-# builder-base is used to build dependencies
-FROM python-base as builder-base
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y \
-        curl \
-        build-essential
+# Layer for installing Python dependencies
+FROM python as dependencies
 
-# Install Poetry - respects $POETRY_VERSION & $POETRY_HOME
-ENV POETRY_VERSION=1.2.2
-RUN curl -sSL https://install.python-poetry.org | python3 -
+# Add some libraries sometimes needed for building Python dependencies, e.g. gcc
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update --fix-missing && \
+    apt-get install --no-install-recommends -y \
+    build-essential
 
-# We copy our Python requirements here to cache them
-# and install only runtime deps using poetry
-WORKDIR $PYSETUP_PATH
-COPY ./poetry.lock ./pyproject.toml ./
-RUN poetry install --only main
+# Copy our Python requirements here to cache them
+COPY ./pyproject.toml .
+
+# Install uv and Python dependencies
+# Note: Using a virtualenv seems unnecessary, but it reduces the size of the resulting Docker image
+RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
+    python -m pip install --upgrade pip uv && \
+    uv venv && \
+    uv pip install --requirement pyproject.toml
 
 
-# 'production' stage uses the clean 'python-base' stage and copies
-# in only our runtime deps that were installed in the 'builder-base'
-FROM python-base as production
+# Layer with only the Python dependencies needed for serving the app in production
+FROM python as production
 
-COPY --from=builder-base $VENV_PATH $VENV_PATH
-COPY . /app
-WORKDIR /app
+COPY /site /site
+COPY --from=dependencies .venv /site/.venv
+
+WORKDIR /site
 
 EXPOSE 80
 
-CMD ["sh", "/app/bin/post_compile"]
+# Collect static assets
+RUN python app.py collectstatic -v 2 --noinput
+
+# Run gunicorn
+CMD ["gunicorn", "app:wsgi", "--config=gunicorn.conf.py"]
