@@ -1,14 +1,21 @@
-on: [push]
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
-  deploy_to_caprover:
-    runs-on: ubuntu-latest
+  deploy-to-caprover:
     name: Deploy to CapRover
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: adamghill/build-docker-and-deploy-to-caprover@v1
+      - uses: adamghill/build-docker-and-deploy-to-caprover@main
         with:
-          caprover-app-name: unsuckjs-web
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          caprover-app-name: unsuckjs-web
           caprover-server-url: ${{ secrets.CAPROVER_SERVER_URL }}
           caprover-app-token: ${{ secrets.CAPROVER_APP_TOKEN }}
