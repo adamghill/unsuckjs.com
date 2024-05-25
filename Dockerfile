@@ -1,5 +1,5 @@
 # Layer with Python and some shared environment variables
-FROM python:3.10-slim as python
+FROM python:3.10-slim-bullseye as python
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -18,6 +18,8 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
 
 # Copy our Python requirements here to cache them
 COPY ./pyproject.toml .
+
+RUN pip config --user set global.progress_bar off
 
 # Install uv and Python dependencies
 # Note: Using a virtualenv seems unnecessary, but it reduces the size of the resulting Docker image
