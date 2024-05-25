@@ -16,10 +16,10 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
     apt-get install --no-install-recommends -y \
     build-essential
 
-# Copy our Python requirements here to cache them
+# Copy our Python requirements here
 COPY ./pyproject.toml .
 
-RUN pip config --user set global.progress_bar off
+# RUN pip config --user set global.progress_bar off
 
 # Install uv and Python dependencies
 # Note: Using a virtualenv seems unnecessary, but it reduces the size of the resulting Docker image
