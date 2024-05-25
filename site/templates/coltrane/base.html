@@ -9,9 +9,11 @@
   {% if DEBUG %}
   <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <link rel="stylesheet" href="https://unpkg.com/microtip/microtip.css">
+  <link rel="stylesheet" href="{% static 'css/microtip.css' %}">
   {% else %}
+  {% compress css %}
   <link rel="stylesheet" href="{% static 'css/unsuckjs.min.css' %}">
+  {% endcompress css %}
   {% endif %}
 
   <style>
@@ -22,8 +24,12 @@
   </script>
 </head>
 
+<style>
+
+</style>
+
 <body>
-  <section class="section" style="float: right;">
+  <section class="section digital-ocean">
     <a
       href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
         src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"

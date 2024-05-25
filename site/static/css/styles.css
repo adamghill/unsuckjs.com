@@ -54,3 +54,13 @@ td div.neg {
 .icon+a {
   padding-left: 28px;
 }
+
+.digital-ocean {
+  float: right;
+}
+
+@media only screen and (max-width: 30em) {
+  .digital-ocean {
+    display: none;
+  }
+}

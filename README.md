@@ -36,11 +36,17 @@ Also, because it's my site and I wanted to. 🥹
 1. Create a personal access token at https://github.com/settings/tokens
 1. `cp .env.example .env`
 1. Update `.env` with your GitHub username and personal access token that was just created
-1. `uv run coltrane play`
+1. `uv run coltrane play`; note: this will take a while on the first load because it hits the GitHub API for every library individually
 
 ## Minify CSS
 
 1. `npm install -g uncss`
 1. Make sure that the regular CSS files are enabled in the template
 1. Make sure the site is running in another terminal
-1. `uncss http://localhost:8000 --output static/css/unsuckjs.min.css`
+1. `uncss http://localhost:8000 --output site/static/css/unsuckjs.min.css -n`
+
+## Work with local coltrane
+
+1. `source .venv/bin/activate`
+1. `uv pip install -e ../coltrane/`
+1. `coltrane play`
