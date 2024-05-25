@@ -19,11 +19,11 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,t
 # Copy our Python requirements here
 COPY ./pyproject.toml .
 
-# RUN pip config --user set global.progress_bar off
-
 # Install uv and Python dependencies
+# Note: Turn off progress bar because it seemed to cause some issues on deployment
 # Note: Using a virtualenv seems unnecessary, but it reduces the size of the resulting Docker image
 RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
+    python -m pip config --user set global.progress_bar off && \
     python -m pip install --upgrade pip uv && \
     uv venv /opt/venv && \
     uv pip install --requirement pyproject.toml
