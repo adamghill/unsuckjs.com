@@ -156,7 +156,7 @@
     },
     {
         "name": "hyperapp",
-        "repo_url": "https://github.com/joxji/hyperapp",
+        "repo_url": "https://github.com/jorgebucaran/hyperapp",
         "size": "1 KB",
         "web_components": false,
         "cdn_url": "https://unpkg.com/hyperapp",
