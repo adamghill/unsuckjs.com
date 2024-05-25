@@ -7,7 +7,6 @@ ENV PYTHONUNBUFFERED=1
 # Layer for installing Python dependencies
 FROM python as dependencies
 
-ENV PIP_DISABLE_PIP_VERSION_CHECK=1
 ENV VIRTUAL_ENV=/opt/venv
 
 # Add some libraries sometimes needed for building Python dependencies, e.g. gcc
@@ -24,7 +23,7 @@ COPY ./pyproject.toml .
 # Note: Using a virtualenv seems unnecessary, but it reduces the size of the resulting Docker image
 RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
     python -m pip config --user set global.progress_bar off && \
-    python -m pip install --upgrade pip uv && \
+    python -m pip --disable-pip-version-check install --upgrade pip uv && \
     uv venv /opt/venv && \
     uv pip install --requirement pyproject.toml
 
