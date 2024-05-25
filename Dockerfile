@@ -23,7 +23,7 @@ COPY ./pyproject.toml .
 # Note: Using a virtualenv seems unnecessary, but it reduces the size of the resulting Docker image
 RUN --mount=type=cache,target=/root/.cache/pip --mount=type=cache,target=/root/.cache/uv \
     python -m pip config --user set global.progress_bar off && \
-    python -m pip --disable-pip-version-check install --upgrade pip uv && \
+    python -m pip --disable-pip-version-check --no-color --no-input install --upgrade pip uv && \
     uv venv /opt/venv && \
     uv pip install --requirement pyproject.toml
 
@@ -44,6 +44,9 @@ EXPOSE 80
 
 # Collect static assets
 RUN python app.py collectstatic -v 2 --noinput
+
+# Compress static assets
+RUN python app.py compress
 
 # Run gunicorn
 CMD ["gunicorn", "app:wsgi", "--config=gunicorn.conf.py"]
