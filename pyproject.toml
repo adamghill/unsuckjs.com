@@ -2,7 +2,7 @@
 name = "site"
 version = "0.1.0"
 dependencies = [
-    "coltrane[deploy, json5, compressor] < 1",
+    "coltrane[deploy, json5, compressor] == 0.35.4",
     "iso8601 < 3",
     "django-cache-memoize < 1",
     "python-benedict < 1",
