@@ -6,19 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UnsuckJS</title>
 
-  {% if DEBUG %}
+  {% compress css %}
   <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <link rel="stylesheet" href="{% static 'css/microtip.css' %}">
-  {% else %}
-  {% compress css %}
-  <link rel="stylesheet" href="{% static 'css/unsuckjs.min.css' %}">
   {% endcompress css %}
-  {% endif %}
 
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="{% static 'css/microtip.css' %}">
 
   <script defer data-domain="unsuckjs.com" src="https://plausible.io/js/script.tagged-events.outbound-links.js">
   </script>
