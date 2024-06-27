@@ -1,5 +1,12 @@
 [
     {
+        "name": "Datastar",
+        "repo_url": "https://github.com/delaneyj/datastar",
+        "size": "~4.5 KB - ~13 KB",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/@sudodevnull/datastar",
+        "categories": ["ui", "ajax", "dom"]       
+    },
+    {
         "name": "Realm",
         "repo_url": "https://github.com/realmorg/realm",
         "size": "~12 KB - ~20 KB",
