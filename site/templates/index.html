@@ -4,7 +4,7 @@
 <section class="section">
     <div class="table-container">
         <table class="table">
-            {% sort_libraries data.libraries 'last_commit' as libraries %}
+            {% hydrate_metadata data.libraries as libraries %}
 
             <thead>
                 <tr>
@@ -40,7 +40,6 @@
             </tfoot>
             <tbody>
                 {% for library in libraries %}
-                {% repo library as metadata %}
                 <tr>
                     <td>
                         <!-- Library Name -->
@@ -73,12 +72,20 @@
 
                     <!-- Description -->
                     <td>
-                        {{ metadata.description|default:'--' }}
+                        {{ library.description|default:'--' }}
                     </td>
 
                     <!-- License -->
                     <td>
-                        {{ metadata.license|default:'--'|safe }}
+                        {% if library.licenseSpdxId == 'NOASSERTION' %}
+                        --
+                        {% elif library.licenseUrl %}
+                        <a href="{{ library.licenseUrl }}">{{ library.licenseSpdxId }}</a>
+                        {% elif library.licenseSpdxId %}
+                        {{ library.licenseSpdxId }}
+                        {% else %}
+                        --
+                        {% endif %}
                     </td>
 
                     <!-- Minified Size -->
@@ -88,40 +95,40 @@
 
                     <!-- Last Commit -->
                     <td>
-                        {{ metadata.last_commit|humanize_datetime|default:"--" }}
+                        {{ library.last_commit|humanize_datetime|default:"--" }}
                     </td>
 
                     <!-- Version -->
                     <td>
-                        {% if metadata.latest_tag %}
+                        {% if library.latest_tag %}
                         <a
-                            href="{{ library.repo_url }}/releases/tag/{{ metadata.latest_tag }}">{{ metadata.latest_version|truncatechars:14|default:"--" }}</a>
+                            href="{{ library.repo_url }}/releases/tag/{{ library.latest_tag }}">{{ library.latest_version|truncatechars:14|default:"--" }}</a>
                         {% else %}
-                        {{ metadata.latest_version|truncatechars:14|default:"--" }}
+                        {{ library.latest_version|truncatechars:14|default:"--" }}
                         {% endif %}
                     </td>
 
                     <!-- Stars -->
                     <td>
-                        {{ metadata.stars|humanize_int|default:"--" }}
+                        {{ library.stars|humanize_int|default:"--" }}
                     </td>
 
                     <!-- Watchers -->
                     <td>
-                        {{ metadata.watchers|humanize_int|default:"--" }}
+                        {{ library.watchers|humanize_int|default:"--" }}
                     </td>
 
                     <!-- Forks -->
                     <td>
-                        {{ metadata.forks|humanize_int|default:"--" }}
+                        {{ library.forks|humanize_int|default:"--" }}
                     </td>
 
                     <!-- Open Issues -->
                     <td>
-                        {% if metadata.open_issues %}
-                        <a href="{{ library.repo_url }}/issues">{{ metadata.open_issues|humanize_int|default:"--" }}</a>
+                        {% if library.open_issues %}
+                        <a href="{{ library.repo_url }}/issues">{{ library.open_issues|humanize_int|default:"--" }}</a>
                         {% else %}
-                        {{ metadata.open_issues|humanize_int|default:"--" }}</a>
+                        {{ library.open_issues|humanize_int|default:"--" }}</a>
                         {% endif %}
                     </td>
 

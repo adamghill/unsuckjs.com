@@ -1,5 +1,4 @@
 import logging
-from typing import Dict, Optional
 
 import httpx
 from benedict import benedict
@@ -9,26 +8,6 @@ from django.conf import settings
 
 register = template.Library()
 logger = logging.getLogger(__name__)
-
-
-def _get_data(url: str) -> Dict:
-    res = httpx.get(
-        url, auth=(settings.ENV["GITHUB_USERNAME"], settings.ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]),
-        follow_redirects=False,
-    )
-
-    if res.status_code in (301, 302):
-        logger.error(f"Redirect detected for: {url}; redirecting to {res.next_request.url}")
-
-        res = httpx.get(
-            url, auth=(settings.ENV["GITHUB_USERNAME"], settings.ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]),
-            follow_redirects=True,
-        )
-
-    if res.is_error:
-        logger.error(res.text)
-    else:
-        return res.json()
 
 
 def get_repo_name(repo_url: str) -> str:
@@ -41,47 +20,79 @@ def get_repo_name(repo_url: str) -> str:
     return github_repo_name
 
 
-def get_last_commit(repo_name: str) -> Optional[str]:
-    commit_url = f"https://api.github.com/repos/{repo_name}/commits?page=1&per_page=1"
-    commits = _get_data(commit_url)
+def run_gql(repo_names):
+    # TODO: Chunk up the list and run multiple queries when there are more than 100 libraries
+    search_repos = " ".join([f"repo:{r}" for r in repo_names])
 
-    if commits and isinstance(commits, list):
-        # Grab the first result because that's all we ever care about
-        latest_commit = commits[0]
+    gql = """
+query repos($repo_names: String!) {
+  search(
+    type: REPOSITORY
+    query: $repo_names
+    first: 100
+  ) {
+    nodes {
+      ... on Repository {
+        defaultBranchRef {
+          target {
+            ... on Commit {
+              history(first: 1) {
+                edges {
+                  node {
+                    authoredDate
+                  }
+                }
+              }
+            }
+          }
+        }
+        id
+        description
+        homepageUrl
+        stargazers {
+          totalCount
+        }
+        watchers {
+          totalCount
+        }
+        forks {
+          totalCount
+        }
+        nameWithOwner
+        licenseInfo {
+          url
+          spdxId
+        }
+        issues(states: [OPEN]) {
+          totalCount
+        }
+        releases(first: 1) {
+          totalCount
+          nodes {
+            name
+            tagName
+          }
+        }
+      }
+    }
+  }
+}
+"""
 
-        latest_commit = benedict(latest_commit)
+    headers = {"Authorization": f"Bearer {settings.ENV['GITHUB_PERSONAL_ACCESS_TOKEN']}"}
 
-        return latest_commit["commit.committer.date"]
+    res = httpx.post("https://api.github.com/graphql",
+        json={"query": gql, "variables": {"repo_names": search_repos}},
+        headers=headers,
+        timeout=30)
 
-
-def get_license(repo: Dict) -> Optional[str]:
-    license = repo.get("license") or {}
-
-    if license and license.get("spdx_id"):
-        if license.get("url"):
-            return f'<a href="{license.get("url")}">{license.get("spdx_id")}</a>'
-        elif license.get("url"):
-            return license.get("spdx_id")
+    return res.json()
 
 
-def get_repo(repo_name: str) -> Dict:
-    repo_url = f"https://api.github.com/repos/{repo_name}"
+@cache_memoize(60 * 60 * 24, prefix="20240731")
+def add_metadata_from_graphql(libraries: list[dict]) -> list[dict]:
+    repo_names = [get_repo_name(l["repo_url"]) for l in libraries]
 
-    return _get_data(repo_url)
-
-
-def get_latest_release(repo_name: str) -> Optional[Dict]:
-    releases_url = (
-        f"https://api.github.com/repos/{repo_name}/releases?page=1&per_page=1"
-    )
-    releases = _get_data(releases_url)
-
-    if releases and isinstance(releases, list):
-        return releases[0]
-
-
-@cache_memoize(60 * 60 * 24, prefix="20230617")
-def get_github_metadata(repo_name: str) -> Dict:
     metadata = {
         "description": None,
         "homepage_url": None,
@@ -95,25 +106,38 @@ def get_github_metadata(repo_name: str) -> Dict:
         "license": None,
     }
 
-    metadata["last_commit"] = get_last_commit(repo_name)
+    data = run_gql(repo_names)
 
-    latest_release = get_latest_release(repo_name)
+    if "data" not in data:
+        raise AssertionError("Missing data from GraphQL")
 
-    if latest_release:
-        metadata["latest_version"] = latest_release.get("name")
-        metadata["latest_tag"] = latest_release.get("tag_name")
+    graphql_search_nodes = data["data"]["search"]["nodes"]
 
-    repo = get_repo(repo_name)
+    for library in libraries:
+        library_metadata = metadata.copy()
+        repo_name = get_repo_name(library["repo_url"])
 
-    if repo:
-        metadata["full_name"] = repo.get("full_name")
-        metadata["description"] = repo.get("description")
-        metadata["homepage_url"] = repo.get("homepage")
-        metadata["stars"] = repo.get("stargazers_count")
-        metadata["watchers"] = repo.get("subscribers_count")
-        metadata["forks"] = repo.get("forks")
-        metadata["open_issues"] = repo.get("open_issues")
+        graphql_data = filter(lambda d: d["nameWithOwner"] == repo_name, graphql_search_nodes)
 
-        metadata["license"] = get_license(repo)
+        try:
+            graphql_data = next(iter(graphql_data))
+        except StopIteration:
+            continue
 
-    return metadata
+        graphql_data = benedict(graphql_data)
+
+        library_metadata["description"] = graphql_data.description
+        library_metadata["homepage_url"] = graphql_data.homepageUrl
+        library_metadata["stars"] = graphql_data.stargazers.totalCount
+        library_metadata["watchers"] = graphql_data.watchers.totalCount
+        library_metadata["forks"] = graphql_data.forks.totalCount
+        library_metadata["open_issues"] = graphql_data.issues.totalCount
+        library_metadata["last_commit"] = graphql_data.defaultBranchRef.target.history.edges[0].node.authoredDate if graphql_data.defaultBranchRef.target.history.edges else None
+        library_metadata["latest_version"] = graphql_data.releases.nodes[0].name if graphql_data.releases.nodes else None
+        library_metadata["latest_tag"] = graphql_data.releases.nodes[0].tagName if graphql_data.releases.nodes else None
+        library_metadata["licenseSpdxId"] = graphql_data.licenseInfo.spdxId if graphql_data.licenseInfo else None
+        library_metadata["licenseUrl"] = graphql_data.licenseInfo.url if graphql_data.licenseInfo else None
+
+        library.update(library_metadata)
+
+    return libraries
