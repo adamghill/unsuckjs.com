@@ -1,0 +1,168 @@
+<dj-extends parent='base.html' />
+
+<dj-block name='title'>UnsuckCSS</dj-block>
+
+<dj-block name='headline'>UnsuckCSS</dj-block>
+
+<dj-block name='subtitle'>
+  Enhance HTML with
+  <abbr title="~20 KB or less" aria-label="~20 KB or less" data-microtip-position="top"
+    role="tooltip">lightweight</abbr>
+  CSS (or <a href="https://unsuckjs.com">JavaScript</a>) frameworks.
+
+  <p>
+    No build tools, no compilers, and no hassle.
+  </p>
+</dj-block>
+
+<dj-block name='content'>
+  <section class="section">
+    <div class="table-container">
+      <table class="table">
+        {% hydrate_metadata data.css as frameworks %}
+
+        <thead>
+          <tr>
+            <th class="header">Framework</th>
+            <th class="header" style="min-width: 250px;">Description</th>
+            <th class="header">License</th>
+            <th class="header">Gzipped Size</th>
+            <th class="header last-commit">Last commit</th>
+            <th class="header" style="min-width: 100px;">Version</th>
+            <th class="header">Stars</th>
+            <th class="header">Watchers</th>
+            <th class="header">Forks</th>
+            <th class="header">Open Issues</th>
+            <th class="header">Classless</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th class="header">Framework</th>
+            <th class="header">Description</th>
+            <th class="header">License</th>
+            <th class="header">Gzipped Size</th>
+            <th class="header">Last commit</th>
+            <th class="header">Version</th>
+            <th class="header">Stars</th>
+            <th class="header">Watchers</th>
+            <th class="header">Forks</th>
+            <th class="header">Open Issues</th>
+            <th class="header">Classless</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for framework in frameworks %}
+          <tr>
+            <td>
+              <!-- Framework Name -->
+              <div class="header" style="padding-bottom: 12px;">
+                {% if framework.homepage_url %}
+                <a href="{{ framework.homepage_url }}">{{ framework.name }}</a>
+                {% elif framework.repo_url %}
+                <a href="{{ framework.repo_url }}">{{ framework.name }}</a>
+                {% else %}
+                {{ framework.name }}
+                {% endif %}
+              </div>
+
+              {% if framework.repo_url %}
+              <span>
+                <a href="{{ framework.repo_url }}">
+                  <img src="{% static 'svg/github.svg' %}" class="">
+                </a>
+              </span>
+              {% endif %}
+
+              {% if framework.cdn_url %}
+              <span>
+                <a href="{{ framework.cdn_url }}">
+                  <img src="{% static 'svg/globe.svg' %}" class="">
+                </a>
+              </span>
+              {% endif %}
+            </td>
+
+            <!-- Description -->
+            <td>
+              {{ framework.description|default:'--' }}
+            </td>
+
+            <!-- License -->
+            <td>
+              {% if framework.licenseSpdxId == 'NOASSERTION' %}
+              --
+              {% elif framework.licenseUrl %}
+              <a href="{{ framework.licenseUrl }}">{{ framework.licenseSpdxId }}</a>
+              {% elif framework.licenseSpdxId %}
+              {{ framework.licenseSpdxId }}
+              {% else %}
+              --
+              {% endif %}
+            </td>
+
+            <!-- Minified Size -->
+            <td>
+              {{ framework.size|default:'--' }}
+            </td>
+
+            <!-- Last Commit -->
+            <td>
+              {{ framework.last_commit|humanize_datetime|default:"--" }}
+            </td>
+
+            <!-- Version -->
+            <td>
+              {% if framework.latest_tag %}
+              <a
+                href="{{ framework.repo_url }}/releases/tag/{{ framework.latest_tag }}">{{ framework.latest_version|truncatechars:14|default:"--" }}</a>
+              {% else %}
+              {{ framework.latest_version|truncatechars:14|default:"--" }}
+              {% endif %}
+            </td>
+
+            <!-- Stars -->
+            <td>
+              {{ framework.stars|humanize_int|default:"--" }}
+            </td>
+
+            <!-- Watchers -->
+            <td>
+              {{ framework.watchers|humanize_int|default:"--" }}
+            </td>
+
+            <!-- Forks -->
+            <td>
+              {{ framework.forks|humanize_int|default:"--" }}
+            </td>
+
+            <!-- Open Issues -->
+            <td>
+              {% if framework.open_issues %}
+              <a href="{{ framework.repo_url }}/issues">{{ framework.open_issues|humanize_int|default:"--" }}</a>
+              {% else %}
+              {{ framework.open_issues|humanize_int|default:"--" }}</a>
+              {% endif %}
+            </td>
+
+            <!-- Classlesss -->
+            <td>
+              {% if framework.classless is True %}
+              <div class="pos">
+                ✓
+              </div>
+              {% elif framework.classless is False %}
+              <div class="neg">
+                ❌
+              </div>
+              {% else %}
+              🤷
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</dj-block>

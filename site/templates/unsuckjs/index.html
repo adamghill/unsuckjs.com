@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block title %}UnsuckJS{% endblock title %}
+
+{% block headline %}UnsuckJS{% endblock headline %}
+
+{% block subtitle %}
+Enhance HTML with
+<abbr title="~10 KB or less" aria-label="~10 KB or less" data-microtip-position="top" role="tooltip">lightweight</abbr>
+JavaScript (or <a href="https://unsuckcss.com">CSS</a>) libraries.
+
+<p>
+  No build tools, no compilers, and no hassle.
+</p>
+{% endblock subtitle%}
+
+{% block content %}
+<section class="section">
+  <div class="table-container">
+    <table class="table">
+      {% hydrate_metadata data.js as libraries %}
+
+      <thead>
+        <tr>
+          <th class="header">Library</th>
+          <th class="header" style="min-width: 250px;">Description</th>
+          <th class="header">License</th>
+          <th class="header">Gzipped Size</th>
+          <th class="header last-commit">Last commit</th>
+          <th class="header" style="min-width: 100px;">Version</th>
+          <th class="header">Stars</th>
+          <th class="header">Watchers</th>
+          <th class="header">Forks</th>
+          <th class="header">Open Issues</th>
+          <th class="header">Web Components</th>
+          <th class="header">IE11 Compatible</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th class="header">Library</th>
+          <th class="header">Description</th>
+          <th class="header">License</th>
+          <th class="header">Gzipped Size</th>
+          <th class="header">Last commit</th>
+          <th class="header">Version</th>
+          <th class="header">Stars</th>
+          <th class="header">Watchers</th>
+          <th class="header">Forks</th>
+          <th class="header">Open Issues</th>
+          <th class="header">Web Components</th>
+          <th class="header">IE11 Compatible</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        {% for library in libraries %}
+        <tr>
+          <td>
+            <!-- Library Name -->
+            <div class="header" style="padding-bottom: 12px;">
+              {% if library.homepage_url %}
+              <a href="{{ library.homepage_url }}">{{ library.name }}</a>
+              {% elif library.repo_url %}
+              <a href="{{ library.repo_url }}">{{ library.name }}</a>
+              {% else %}
+              {{ library.name }}
+              {% endif %}
+            </div>
+
+            {% if library.repo_url %}
+            <span>
+              <a href="{{ library.repo_url }}">
+                <img src="{% static 'svg/github.svg' %}" class="">
+              </a>
+            </span>
+            {% endif %}
+
+            {% if library.cdn_url %}
+            <span>
+              <a href="{{ library.cdn_url }}">
+                <img src="{% static 'svg/globe.svg' %}" class="">
+              </a>
+            </span>
+            {% endif %}
+          </td>
+
+          <!-- Description -->
+          <td>
+            {{ library.description|default:'--' }}
+          </td>
+
+          <!-- License -->
+          <td>
+            {% if library.licenseSpdxId == 'NOASSERTION' %}
+            --
+            {% elif library.licenseUrl %}
+            <a href="{{ library.licenseUrl }}">{{ library.licenseSpdxId }}</a>
+            {% elif library.licenseSpdxId %}
+            {{ library.licenseSpdxId }}
+            {% else %}
+            --
+            {% endif %}
+          </td>
+
+          <!-- Minified Size -->
+          <td>
+            {{ library.size|default:'--' }}
+          </td>
+
+          <!-- Last Commit -->
+          <td>
+            {{ library.last_commit|humanize_datetime|default:"--" }}
+          </td>
+
+          <!-- Version -->
+          <td>
+            {% if library.latest_tag %}
+            <a
+              href="{{ library.repo_url }}/releases/tag/{{ library.latest_tag }}">{{ library.latest_version|truncatechars:14|default:"--" }}</a>
+            {% else %}
+            {{ library.latest_version|truncatechars:14|default:"--" }}
+            {% endif %}
+          </td>
+
+          <!-- Stars -->
+          <td>
+            {{ library.stars|humanize_int|default:"--" }}
+          </td>
+
+          <!-- Watchers -->
+          <td>
+            {{ library.watchers|humanize_int|default:"--" }}
+          </td>
+
+          <!-- Forks -->
+          <td>
+            {{ library.forks|humanize_int|default:"--" }}
+          </td>
+
+          <!-- Open Issues -->
+          <td>
+            {% if library.open_issues %}
+            <a href="{{ library.repo_url }}/issues">{{ library.open_issues|humanize_int|default:"--" }}</a>
+            {% else %}
+            {{ library.open_issues|humanize_int|default:"--" }}</a>
+            {% endif %}
+          </td>
+
+          <!-- Web Components -->
+          <td>
+            {% if library.web_components is True %}
+            <div class="pos">
+              ✓
+            </div>
+            {% elif library.web_components is False %}
+            <div class="neg">
+              ❌
+            </div>
+            {% else %}
+            🤷
+            {% endif %}
+          </td>
+
+          <!-- IE11 Compatible -->
+          <td>
+            {% if library.ie11_compatible is True %}
+            <div class="pos">
+              ✓
+            </div>
+            {% elif library.ie11_compatible is False %}
+            <div class="neg">
+              ❌
+            </div>
+            {% else %}
+            🤷
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock content %}

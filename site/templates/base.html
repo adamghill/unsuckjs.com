@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    <dj-block name='title'></dj-block>
+  </title>
+
+  {% compress css %}
+  <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/microtip.css' %}">
+  {% endcompress css %}
+
+  <script defer data-domain="{% if site == 'unsuckcss' %}unsuckcss.com{% else %}unsuckjs.com{% endif %}"
+    src="https://plausible.io/js/script.tagged-events.outbound-links.js">
+  </script>
+</head>
+
+<style></style>
+
+<body>
+  <section class="section digital-ocean">
+    <a
+      href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+        src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
+        alt="DigitalOcean Referral Badge" /></a>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        <dj-block name='headline'></dj-block>
+      </h1>
+      <p class="subtitle" style="padding-bottom: 5px; margin-bottom: 0px;">
+        <dj-block name='subtitle'></dj-block>
+      </p>
+    </div>
+  </section>
+
+  <section class="section callout">
+    {% if site == 'unsuckcss' %}
+    <a href="https://github.com/adamghill/unsuckjs.com/blob/main/site/data/css.json">
+      Make a PR to add new frameworks +
+    </a>
+    {% else %}
+    <a href="https://github.com/adamghill/unsuckjs.com/blob/main/site/data/js.json">
+      Make a PR to add new libraries +
+    </a>
+    {% endif %}
+
+    <span style="float: right;">
+      Scroll for more info ➠
+    </span>
+  </section>
+
+  <dj-block name='content'></dj-block>
+
+  <section class="section callout" style="margin-bottom: 1rem;">
+    {% if site == 'unsuckcss' %}
+    <a href="https://github.com/adamghill/unsuckjs.com/blob/main/site/data/css.json">
+      Make a PR to add new frameworks +
+    </a>
+    {% else %}
+    <a href="https://github.com/adamghill/unsuckjs.com/blob/main/site/data/js.json">
+      Make a PR to add new libraries +
+    </a>
+    {% endif %}
+
+    <span style="float: right;">
+      Scroll for more info ➠
+    </span>
+  </section>
+
+  <section class="section" style="text-align: center; margin-bottom: 1rem;">
+    <a
+      href="https://www.digitalocean.com/?refcode=617d629f56c0&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img
+        src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg"
+        alt="DigitalOcean Referral Badge" /></a>
+  </section>
+
+  <dj-footer />
+</body>
+
+</html>

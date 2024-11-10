@@ -2,16 +2,14 @@
 name = "site"
 version = "0.1.0"
 dependencies = [
-    "coltrane[deploy, json5, compressor] == 0.35.4",
+    "coltrane[angles, compressor, deploy, json5] >= 0.37.0",
     "iso8601 < 3",
     "django-cache-memoize < 1",
     "python-benedict < 1",
     "httpx < 1",
-    "gunicorn < 21",
     "hiredis < 3",
     "redis < 5",
-    # "refreshcss @ file://${PROJECT_ROOT}/../refreshcss/"
-    "refreshcss >= 0.2.1"
+    "refreshcss >= 0.5.1",
 ]
 requires-python = ">=3.10"
 
@@ -90,6 +88,10 @@ markers = [
 pythonpath = [
   "site"
 ]
+
+[tool.uv.sources]
+#coltrane = { path = "../coltrane", editable = true }
+#refreshcss = { path = "../refreshcss", editable = true }
 
 [build-system]
 requires = ["setuptools"]

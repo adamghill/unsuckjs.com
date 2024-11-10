@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Marx",
+    "repo_url": "https://github.com/mblode/marx",
+    "cdn_url": "https://unpkg.com/marx-css/css/marx.min.css",
+    "demo_url": "https://mblode.github.io/marx/",
+    "size": "3.0 kB",
+    "classless": true
+  }, {
+    "name": "MVP",
+    "repo_url": "https://github.com/andybrewer/mvp",
+    "cdn_url": "https://unpkg.com/mvp.css",
+    "demo_url": "https://andybrewer.github.io/mvp/mvp.html",
+    "size": "4.1 kB",
+    "classless": true
+  }, {
+    "name": "Sakura",
+    "repo_url": "https://github.com/oxalorg/sakura",
+    "cdn_url": "https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css",
+    "demo_url": "https://oxal.org/projects/sakura/demo/",
+    "size": "2.5 kB",
+    "classless": true
+  }, {
+    "name": "Simple.css",
+    "repo_url": "https://github.com/kevquirk/simple.css",
+    "cdn_url": "https://cdn.simplecss.org/simple.min.css",
+    "demo_url": "https://simplecss.org/",
+    "size": "2.9 kB",
+    "classless": true
+  }, {
+    "name": "Tacit",
+    "repo_url": "https://github.com/yegor256/tacit",
+    "cdn_url": "https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css.min.css",
+    "demo_url": "https://yegor256.github.io/tacit/",
+    "size": "2.55 kB",
+    "classless": true
+  },  
+]
