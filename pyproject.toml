@@ -10,6 +10,7 @@ dependencies = [
     "hiredis < 3",
     "redis < 5",
     "refreshcss >= 0.5.1",
+    "emoji-data-python >= 1.6.0",
 ]
 requires-python = ">=3.10"
 
@@ -92,7 +93,3 @@ pythonpath = [
 [tool.uv.sources]
 #coltrane = { path = "../coltrane", editable = true }
 #refreshcss = { path = "../refreshcss", editable = true }
-
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"

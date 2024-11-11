@@ -302,6 +302,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c4/ce/4df4b564c1f890463f5b7c4b1d81976d08dbafdb0e23c23faedda770a297/django_fastdev-1.12.0.tar.gz", hash = "sha256:83a44d5cc1e8f72afb361caf9f6dbb0617587653837c213f32f4fab13f90acdb", size = 15363 }
 
 [[package]]
+name = "emoji-data-python"
+version = "1.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/10/4ec0aca3db86080b268e8a24a50ceda2c620d1614e0e2c3ee0473ae9d5f9/emoji_data_python-1.6.0.tar.gz", hash = "sha256:6be6738f368c827648da93fbedf08116c3d317d338a55409f74e7d759fa0e354", size = 112924 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c3/ff/f55eb9f141ccff4f8217d706b11f74e2ad648595ccd07b155540b867b242/emoji_data_python-1.6.0-py3-none-any.whl", hash = "sha256:52b2af793e9431d955ea765ec6b95a0eaba1d17572307c86f96948e5bd0aca82", size = 119616 },
+]
+
+[[package]]
 name = "exceptiongroup"
 version = "1.2.2"
 source = { registry = "https://pypi.org/simple" }
@@ -947,10 +956,11 @@ wheels = [
 [[package]]
 name = "site"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "coltrane", extra = ["angles", "compressor", "deploy", "json5"] },
     { name = "django-cache-memoize" },
+    { name = "emoji-data-python" },
     { name = "hiredis" },
     { name = "httpx" },
     { name = "iso8601" },
@@ -963,6 +973,7 @@ dependencies = [
 requires-dist = [
     { name = "coltrane", extras = ["angles", "compressor", "deploy", "json5"], specifier = ">=0.37.0" },
     { name = "django-cache-memoize", specifier = "<1" },
+    { name = "emoji-data-python", specifier = ">=1.6.0" },
     { name = "hiredis", specifier = "<3" },
     { name = "httpx", specifier = "<1" },
     { name = "iso8601", specifier = "<3" },

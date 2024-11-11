@@ -1,5 +1,6 @@
 import logging
 
+import emoji_data_python
 import iso8601
 from api.github import add_metadata_from_graphql
 from django import template
@@ -37,3 +38,11 @@ def hydrate_metadata(libraries: list[dict]) -> list[dict]:
         )
     except AssertionError as e:
         logger.exception(e)
+
+
+@register.filter(name="emojize")
+def emojize(value: str) -> str:
+    if value:
+        return emoji_data_python.replace_colons(value)
+
+    return value
