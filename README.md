@@ -1,6 +1,6 @@
-# unsuckjs.com
+# unsuckjs.com / unsuckcss.com
 
-Progressively enhance HTML with lightweight JavaScript libraries. No build tools and no compiling necessary. Most libraries should be 10 KB or less (minified).
+Progressively enhance HTML with lightweight JavaScript/CSS libraries. No build tools and no compiling necessary. Most libraries should be 10 KB or less (minified).
 
 ## 🤨 Why?
 
@@ -13,40 +13,23 @@ Yeah, probably.
 ## 🛠️ Add a new library
 
 1. Fork this repo
-1. Update `data/libraries.json` following the current examples
+1. Update `data/js.json` or `data/css.json` following the current examples
 1. Make a PR
 1. ???
 1. Profit!
 
-## 🤓 Why use `coltrane` to build this site?
+## 🤓 Why use [coltrane](https://coltrane.adamghill.com) to build this site?
 
-unsuckjs.com looks like a static site (and it mostly is), but I wanted to fetch repository metadata dynamically without having to re-run a static site generator on a schedule. So, I used my personal static site framework, [coltrane](https://coltrane.readthedocs.io) to write most of the content in Markdown, but still have the flexibility of using Django `templatetags` for server-side functionality. It's the best of both worlds.
+[unsuckjs.com](https://unsuckjs.com) and [unsuckcss.com](https://unsuckcss.com) look like static sites (and they mostly are), but I wanted to fetch repository metadata dynamically without having to re-run a static site generator on a schedule. So, I used [coltrane](https://coltrane.readthedocs.io) which gives the flexibility of using Django `templatetags` for server-side functionality. It's the best of both worlds.
 
-Also, because it's my site and I wanted to. 🥹
-
-## Hacker News Discussion
-
-- https://news.ycombinator.com/item?id=36343544
+Also... because it's my site and I wanted to. 🥹
 
 ## 🔬 Local development
 
+1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
 1. `git clone` this repo
 1. `cd` into the newly created directory
-1. `uv install -r pyproject.toml`
 1. Create a personal access token at https://github.com/settings/tokens
 1. `cp .env.example .env`
 1. Update `.env` with your GitHub username and personal access token that was just created
-1. `uv run coltrane play`; note: this will take a while on the first load because it hits the GitHub API for every library individually
-
-## Minify CSS
-
-1. `npm install -g uncss`
-1. Make sure that the regular CSS files are enabled in the template
-1. Make sure the site is running in another terminal
-1. `uncss http://localhost:8000 --output site/static/css/unsuckjs.min.css -n`
-
-## Work with local coltrane
-
-1. `source .venv/bin/activate`
-1. `uv pip install -e ../coltrane/`
-1. `coltrane play`
+1. `uv run coltrane play`; note: this will take a while on the first load because it loads a lot of data from the GitHub API
