@@ -2,11 +2,20 @@ td div.pos {
   color: green;
   width: 20px;
   font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
 }
 
 td div.neg {
   color: red;
   width: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+td div.unknown {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .centered {
