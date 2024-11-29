@@ -13,6 +13,7 @@ COMPRESS_FILTERS = {
 
 SITES = {
     "unsuckjs": [
+        "0.0.0.0:80",  # default for healthcheck
         "0.0.0.0:8024",
         "localhost:8024",
         "unsuckjs.localhost",
