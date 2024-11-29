@@ -24,7 +24,7 @@ SITES = {
         "localhost:8025",
         "unsuckcss.localhost",
         "unsuckcss.com",
-        unsuckcss.adamghill.com",
+        "unsuckcss.adamghill.com",
     ],
 }
 
