@@ -13,7 +13,7 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update --fix-missing && \
     apt-get install --no-install-recommends -y \
-    build-essential curl
+    build-essential
 
 # Copy our Python requirements here
 COPY ./pyproject.toml .
@@ -42,11 +42,10 @@ WORKDIR /site
 
 EXPOSE 80
 
-# Collect static assets
-RUN python app.py collectstatic -v 2 --noinput
-
-# Compress static assets
-RUN python app.py compress
+# Install curl, collect static assets, compress static assets
+RUN apt-get install --no-install-recommends -y curl && \
+    python app.py collectstatic -v 2 --noinput && \
+    python app.py compress
 
 # Run gunicorn
 CMD ["gunicorn", "app:wsgi", "--config=gunicorn.conf.py"]
