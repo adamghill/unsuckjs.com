@@ -13,7 +13,7 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN --mount=type=cache,target=/var/cache/apt,sharing=locked --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update --fix-missing && \
     apt-get install --no-install-recommends -y \
-    build-essential
+    build-essential curl
 
 # Copy our Python requirements here
 COPY ./pyproject.toml .
