@@ -17,12 +17,14 @@ SITES = {
         "localhost:8024",
         "unsuckjs.localhost",
         "unsuckjs.com",
+        "unsuckjs.adamghill.com",
     ],
     "unsuckcss": [
         "0.0.0.0:8025",
         "localhost:8025",
         "unsuckcss.localhost",
         "unsuckcss.com",
+        unsuckcss.adamghill.com",
     ],
 }
 
