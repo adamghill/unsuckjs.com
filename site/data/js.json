@@ -54,6 +54,14 @@
         "categories": ["ui"]
     },
     {
+        "name": "Evemit",
+        "repo_url": "https://github.com/Nicolab/evemit",
+        "size": "~1 KB",        
+        "cdn_url": "https://www.unpkg.com/evemit",
+        "web_components": false,        
+        "categories": ["ui"]        
+    },
+    {
         "name": "Litedom",
         "repo_url": "https://github.com/mardix/litedom",
         "size": "~3 kB",
