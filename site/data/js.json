@@ -269,7 +269,7 @@
     {
         "name": "surreal",
         "repo_url": "https://github.com/gnat/surreal",
-        "size": 320 lines (3.8 kB),
+        "size": "320 lines (3.8 kB)",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/gnat/surreal@main/surreal.js",
         "categories": ["dom", "ui"]
