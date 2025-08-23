@@ -266,4 +266,12 @@
         "cdn_url": null,
         "categories": ["ui"]
     },
+    {
+        "name": "Datastar",
+        "repo_url": "https://github.com/starfederation/datastar",
+        "size": "~10 kB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/starfederation/datastar@main/bundles/datastar.js,
+        "categories": ["ui"]
+    }
 ]
