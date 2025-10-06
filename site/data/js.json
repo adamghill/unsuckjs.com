@@ -1,9 +1,9 @@
 [
     {
         "name": "Realm",
-        "repo_url": "https://github.com/realmorg/realm",
+        "repo_url": "https://github.com/realmui/realm",
         "size": "~12 kB - ~20 kB",
-        "cdn_url": "https://unpkg.com/@realmorg/realm@0.0.17/dist/realm.production.min.js",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/@realmorg/realm/dist/realm.production.min.js",
         "web_components": true,
         "categories": ["ui"]
     },
@@ -179,14 +179,14 @@
         "categories": ["ui"]
     },
     {
-        "name": "Tram-Lite",
-        "repo_url": "https://github.com/Tram-One/tram-lite",
-        "size": "1.6 kB",
+        "name": "Tram-Deco",
+        "repo_url": "https://github.com/Tram-One/tram-deco",
+        "size": "1.8 kB",
         "web_components": true,
-        "cdn_url": "https://unpkg.com/tram-lite",
+        "cdn_url": "https://unpkg.com/tram-deco@latest/tram-deco.min.js",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "Bau",
         "repo_url": "https://github.com/grucloud/bau",
         "size": "1.6 kB",
@@ -194,7 +194,7 @@
         "cdn_url": "https://unpkg.com/@grucloud/bau",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "Crank.js",
         "repo_url": "https://github.com/bikeshaving/crank",
         "size": "~16 kB",
@@ -202,7 +202,7 @@
         "cdn_url": "https://unpkg.com/@b9g/crank?module",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "lighterhtml",
         "repo_url": "https://github.com/WebReflection/lighterhtml",
         "size": "<2 kB",
@@ -210,7 +210,7 @@
         "cdn_url": "https://unpkg.com/lighterhtml?module",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "µhtml",
         "repo_url": "https://github.com/WebReflection/uhtml",
         "size": "<3 kB",
@@ -218,7 +218,7 @@
         "cdn_url": "https://unpkg.com/uhtml",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "Lithent",
         "repo_url": "https://github.com/superlucky84/lithent",
         "size": "3 kB",
@@ -260,10 +260,131 @@
     },
     {
         "name": "minijs",
-        "repo_url": "https://github.com/Group-One-Technology/minijs",
+        "repo_url": "https://github.com/reallygoodsoftware/minijs",
         "size": null,
         "web_components": false,
-        "cdn_url": null,
+        "cdn_url": "https://cdn.html-first.com/mini-0.7.2.js",
         "categories": ["ui"]
     },
+    {
+        "name": "Hybrids",
+        "repo_url": "https://github.com/hybridsjs/hybrids",
+        "cdn_url": "https://esm.sh/hybrids",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Heximal",
+        "repo_url": "https://github.com/elematic/heximal",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "is-land",
+        "repo_url": "https://github.com/11ty/is-land",
+        "size": "2.1 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Stencil",
+        "repo_url": "https://github.com/ionic-team/stencil",
+        "size": "10.3 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "LemonadeJS",
+        "repo_url": "https://github.com/lemonadejs/lemonadejs",
+        "cdn_url": "https://cdn.jsdelivr.net/npm/lemonadejs/dist/lemonade.min.js",
+        "size": "6.9 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Web Component Base",
+        "repo_url": "https://github.com/ayoayco/web-component-base",
+        "cdn_url": "https://unpkg.com/web-component-base",
+        "size": "1.8 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Cami.js",
+        "repo_url": "https://github.com/kennyfrc/cami.js",
+        "cdn_url": "https://unpkg.com/cami",
+        "size": "16.5 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "El",
+        "repo_url": "https://github.com/frameable/el",
+        "size": "2.3 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Panel",
+        "repo_url": "https://github.com/mixpanel/panel",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "FicusJS",
+        "repo_url": "https://github.com/ficusjs/ficusjs",
+        "cdn_url": "https://cdn.skypack.dev/ficusjs@6/custom-element",
+        "size": "18.8 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Adventus",
+        "repo_url": "https://github.com/Cobwebsite/Aventus",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Element",
+        "repo_url": "https://github.com/lume/element",
+        "size": "14.9 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Reken",
+        "repo_url": "https://github.com/hbroek/reken",
+        "size": "9.7 kB",
+        "web_components": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "WebC",
+        "repo_url": "https://github.com/11ty/webc",
+        "size": "164.1 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Heartml Reciprocate",
+        "repo_url": "https://codeberg.org/heartml/reciprocate",
+        "size": "1 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "htmz",
+        "repo_url": "https://github.com/Kalabasa/htmz",
+        "size": "<1 kB",
+        "web_components": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "_hyperscript",
+        "repo_url": "https://github.com/bigskysoftware/_hyperscript",
+        "cdn_url": "https://unpkg.com/hyperscript.org",
+        "size": "26.2 kB",
+        "web_components": false,
+        "categories": ["ui"]
+    }
 ]
