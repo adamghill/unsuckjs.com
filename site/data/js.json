@@ -186,7 +186,7 @@
         "cdn_url": "https://unpkg.com/tram-lite",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "Bau",
         "repo_url": "https://github.com/grucloud/bau",
         "size": "1.6 kB",
@@ -194,7 +194,7 @@
         "cdn_url": "https://unpkg.com/@grucloud/bau",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "Crank.js",
         "repo_url": "https://github.com/bikeshaving/crank",
         "size": "~16 kB",
@@ -202,7 +202,7 @@
         "cdn_url": "https://unpkg.com/@b9g/crank?module",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "lighterhtml",
         "repo_url": "https://github.com/WebReflection/lighterhtml",
         "size": "<2 kB",
@@ -210,7 +210,7 @@
         "cdn_url": "https://unpkg.com/lighterhtml?module",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "µhtml",
         "repo_url": "https://github.com/WebReflection/uhtml",
         "size": "<3 kB",
@@ -218,7 +218,7 @@
         "cdn_url": "https://unpkg.com/uhtml",
         "categories": ["ui"]
     },
-    {   
+    {
         "name": "Lithent",
         "repo_url": "https://github.com/superlucky84/lithent",
         "size": "3 kB",
@@ -266,4 +266,12 @@
         "cdn_url": null,
         "categories": ["ui"]
     },
+    {
+        "name": "attractive.js",
+        "repo_url": "https://github.com/Rails-Designer/attractive.js",
+        "size": "~5 kB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/attractive.js@latest/dist/attractive.min.js",
+        "categories": ["dom"]
+    }
 ]
