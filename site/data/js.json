@@ -386,5 +386,12 @@
         "size": "26.2 kB",
         "web_components": false,
         "categories": ["ui"]
+    },
+    {
+        "name": "Nomini",
+        "repo_url": "https://github.com/ravenclaw900/nomini",
+        "size": "<2 kB",
+        "web_components": false,
+        "categories": ["ui"]
     }
 ]
