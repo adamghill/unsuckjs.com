@@ -407,5 +407,123 @@
         "size": "50 kB",
         "web_components": true,
         "categories": ["ui"]
+    },
+    {
+        "name": "Omi",
+        "repo_url": "https://github.com/Tencent/omi",
+        "size": "11 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Readymade",
+        "repo_url": "https://github.com/readymade-ui/readymade",
+        "size": "3.9 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "slim.js",
+        "repo_url": "https://github.com/slimjs/slim.js",
+        "size": "2.6 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Atomico",
+        "repo_url": "https://github.com/atomicojs/atomico",
+        "size": "6.2 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Haunted",
+        "repo_url": "https://github.com/matthewp/haunted",
+        "size": "8.5 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "htmlhammer",
+        "repo_url": "https://github.com/vsmid/htmlhammer",
+        "size": "3.4 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Lightning Web Components",
+        "repo_url": "https://github.com/salesforce/lwc",
+        "size": "25 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Lume Element",
+        "repo_url": "https://github.com/lume/element",
+        "size": "15 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Riot",
+        "repo_url": "https://github.com/riot/riot",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Sidewind",
+        "repo_url": "https://github.com/survivejs/sidewind",
+        "size": "6.2 kB",
+        "web_components": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "uhtml",
+        "repo_url": "https://github.com/WebReflection/uhtml",
+        "size": "3 kB",
+        "web_components": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "AppRun",
+        "repo_url": "https://github.com/yysun/apprun",
+        "size": "13.6 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "base-custom-webcomponent",
+        "repo_url": "https://github.com/node-projects/base-custom-webcomponent",
+        "size": "2.2 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "FAST",
+        "repo_url": "https://github.com/microsoft/fast",
+        "size": "19 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Joist",
+        "repo_url": "https://github.com/joist-framework/joist",
+        "size": "2 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Catalyst",
+        "repo_url": "https://github.com/github/catalyst",
+        "size": "2.4 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Stellar",
+        "repo_url": "https://github.com/hawkticehurst/stellar",
+        "size": "1.3 kB",
+        "web_components": true,
+        "categories": ["ui"]
     }
 ]
