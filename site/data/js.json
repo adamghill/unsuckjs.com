@@ -393,5 +393,19 @@
         "size": "<2 kB",
         "web_components": false,
         "categories": ["ui"]
+    },
+    {
+        "name": "WebC",
+        "repo_url": "https://github.com/11ty/webc",
+        "size": "164 kB",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Enhance SSR",
+        "repo_url": "https://github.com/enhance-dev/enhance-ssr",
+        "size": "50 kB",
+        "web_components": true,
+        "categories": ["ui"]
     }
 ]
