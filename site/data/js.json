@@ -525,5 +525,19 @@
         "size": "1.3 kB",
         "web_components": true,
         "categories": ["ui"]
+    },
+    {
+        "name": "i-html",
+        "repo_url": "https://github.com/keithamus/i-html",
+        "size": "4.1 kB",
+        "web_components": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Zjax",
+        "repo_url": "https://github.com/codepilotsf/zjax",
+        "size": "4.9 kB",
+        "web_components": false,
+        "categories": ["ui"]
     }
 ]
