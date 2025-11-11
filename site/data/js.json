@@ -539,5 +539,18 @@
         "size": "4.9 kB",
         "web_components": false,
         "categories": ["ui"]
+    },
+    {
+        "name": "Marko",
+        "repo_url": "https://github.com/marko-js/marko",
+        "web_components": false,
+        "categories": ["ui"]
+    },
+    {
+        "name": "Mavo",
+        "repo_url": "https://github.com/mavoweb/mavo",
+        "size": "66 kB",
+        "web_components": false,
+        "categories": ["ui"]
     }
 ]
