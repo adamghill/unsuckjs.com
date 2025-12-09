@@ -267,19 +267,6 @@
         "categories": ["ui"]
     },
     {
-        "name": "Hybrids",
-        "repo_url": "https://github.com/hybridsjs/hybrids",
-        "cdn_url": "https://esm.sh/hybrids",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Heximal",
-        "repo_url": "https://github.com/elematic/heximal",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
         "name": "is-land",
         "repo_url": "https://github.com/11ty/is-land",
         "size": "2.1 kB",
@@ -310,44 +297,9 @@
         "categories": ["ui"]
     },
     {
-        "name": "Cami.js",
-        "repo_url": "https://github.com/kennyfrc/cami.js",
-        "cdn_url": "https://unpkg.com/cami",
-        "size": "16.5 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
         "name": "El",
         "repo_url": "https://github.com/frameable/el",
         "size": "2.3 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Panel",
-        "repo_url": "https://github.com/mixpanel/panel",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "FicusJS",
-        "repo_url": "https://github.com/ficusjs/ficusjs",
-        "cdn_url": "https://cdn.skypack.dev/ficusjs@6/custom-element",
-        "size": "18.8 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Adventus",
-        "repo_url": "https://github.com/Cobwebsite/Aventus",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Element",
-        "repo_url": "https://github.com/lume/element",
-        "size": "14.9 kB",
         "web_components": true,
         "categories": ["ui"]
     },
@@ -356,13 +308,6 @@
         "repo_url": "https://github.com/hbroek/reken",
         "size": "9.7 kB",
         "web_components": false,
-        "categories": ["ui"]
-    },
-    {
-        "name": "WebC",
-        "repo_url": "https://github.com/11ty/webc",
-        "size": "164.1 kB",
-        "web_components": true,
         "categories": ["ui"]
     },
     {
@@ -380,32 +325,10 @@
         "categories": ["ui"]
     },
     {
-        "name": "_hyperscript",
-        "repo_url": "https://github.com/bigskysoftware/_hyperscript",
-        "cdn_url": "https://unpkg.com/hyperscript.org",
-        "size": "26.2 kB",
-        "web_components": false,
-        "categories": ["ui"]
-    },
-    {
         "name": "Nomini",
         "repo_url": "https://github.com/ravenclaw900/nomini",
         "size": "<2 kB",
         "web_components": false,
-        "categories": ["ui"]
-    },
-    {
-        "name": "WebC",
-        "repo_url": "https://github.com/11ty/webc",
-        "size": "164 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Enhance SSR",
-        "repo_url": "https://github.com/enhance-dev/enhance-ssr",
-        "size": "50 kB",
-        "web_components": true,
         "categories": ["ui"]
     },
     {
@@ -451,20 +374,6 @@
         "categories": ["ui"]
     },
     {
-        "name": "Lightning Web Components",
-        "repo_url": "https://github.com/salesforce/lwc",
-        "size": "25 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Lume Element",
-        "repo_url": "https://github.com/lume/element",
-        "size": "15 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
         "name": "Riot",
         "repo_url": "https://github.com/riot/riot",
         "web_components": true,
@@ -485,23 +394,9 @@
         "categories": ["ui"]
     },
     {
-        "name": "AppRun",
-        "repo_url": "https://github.com/yysun/apprun",
-        "size": "13.6 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
         "name": "base-custom-webcomponent",
         "repo_url": "https://github.com/node-projects/base-custom-webcomponent",
         "size": "2.2 kB",
-        "web_components": true,
-        "categories": ["ui"]
-    },
-    {
-        "name": "FAST",
-        "repo_url": "https://github.com/microsoft/fast",
-        "size": "19 kB",
         "web_components": true,
         "categories": ["ui"]
     },
@@ -537,19 +432,6 @@
         "name": "Zjax",
         "repo_url": "https://github.com/codepilotsf/zjax",
         "size": "4.9 kB",
-        "web_components": false,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Marko",
-        "repo_url": "https://github.com/marko-js/marko",
-        "web_components": false,
-        "categories": ["ui"]
-    },
-    {
-        "name": "Mavo",
-        "repo_url": "https://github.com/mavoweb/mavo",
-        "size": "66 kB",
         "web_components": false,
         "categories": ["ui"]
     }
