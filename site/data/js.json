@@ -130,9 +130,9 @@
         "categories": ["ui"]
     },
     {
-        "name": "reken",
+        "name": "Reken",
         "repo_url": "https://github.com/hbroek/reken",
-        "size": "5 kB",
+        "size": "11 kB",
         "web_components": false,
         "cdn_url": "https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js",
         "categories": ["ui"]
@@ -304,13 +304,6 @@
         "categories": ["ui"]
     },
     {
-        "name": "Reken",
-        "repo_url": "https://github.com/hbroek/reken",
-        "size": "9.7 kB",
-        "web_components": false,
-        "categories": ["ui"]
-    },
-    {
         "name": "Heartml Reciprocate",
         "repo_url": "https://codeberg.org/heartml/reciprocate",
         "size": "1 kB",
@@ -383,13 +376,6 @@
         "name": "Sidewind",
         "repo_url": "https://github.com/survivejs/sidewind",
         "size": "6.2 kB",
-        "web_components": false,
-        "categories": ["ui"]
-    },
-    {
-        "name": "uhtml",
-        "repo_url": "https://github.com/WebReflection/uhtml",
-        "size": "3 kB",
         "web_components": false,
         "categories": ["ui"]
     },
