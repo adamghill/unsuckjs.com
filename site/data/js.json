@@ -267,6 +267,14 @@
         "categories": ["ui"]
     },
     {
+        "name": "data-star",
+        "repo_url": "https://github.com/starfederation/datastar/",
+        "size": "~10.75 kB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/gh/starfederation/datastar@main/bundles/datastar.js",
+        "categories": ["ui"]
+    },
+    {
         "name": "is-land",
         "repo_url": "https://github.com/11ty/is-land",
         "size": "2.1 kB",
