@@ -1,5 +1,13 @@
 [
     {
+        "name": "Reactive Mastro",
+        "repo_url": "https://github.com/mastrojs/mastro/tree/main/src/reactive",
+        "size": "2.8 kB",
+        "cdn_url": "https://esm.sh/@jsr/mastrojs__mastro@0.0.5/es2022/reactive.bundle.mjs",
+        "web_components": true,
+        "categories": ["ui"]
+    },
+    {
         "name": "Realm",
         "repo_url": "https://github.com/realmui/realm",
         "size": "~12 kB - ~20 kB",
