@@ -298,6 +298,13 @@
         "categories": ["ui"]
     },
     {
+        "name": "attractive.js",
+        "repo_url": "https://github.com/Rails-Designer/attractivejs",
+        "size": "~5 kB",
+        "web_components": false,
+        "cdn_url": "https://cdn.jsdelivr.net/npm/attractive.js@latest/dist/attractive.min.js",
+        "categories": ["dom"]
+    },
         "name": "Stencil",
         "repo_url": "https://github.com/ionic-team/stencil",
         "size": "10.3 kB",
