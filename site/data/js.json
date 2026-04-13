@@ -444,5 +444,12 @@
         "size": "4.9 kB",
         "web_components": false,
         "categories": ["ui"]
-    }
+    },
+    {
+        "name": "muJS (µJS)",
+        "repo_url": "https://github.com/Digicreon/muJS",
+        "size": "~5 kB",
+        "cdn_url": "https://unpkg.com/@digicreon/mujs/dist/mu.min.js",
+        "categories": ["ui", "ajax"]
+    },
 ]
